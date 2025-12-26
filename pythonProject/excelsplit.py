@@ -28,8 +28,8 @@ def split_csv_by_row_count(input_file, rows_per_split, output_file_prefix):
 
 
 # Usage
-input_file = 'C:/Users/EIMS/Desktop/isolation.csv'  # Replace with your file name
-rows_per_split = 500  # Number of rows per split
-output_file_prefix = 'isolation'  # Prefix for output files
+input_file = 'C:/Users/EIMS/Desktop/yokogawa_common/requesters_4_07_Mar_25_07_32.csv'  # Replace with your file name
+rows_per_split = 900  # Number of rows per split
+output_file_prefix = 'requester'  # Prefix for output files
 
 split_csv_by_row_count(input_file, rows_per_split, output_file_prefix)

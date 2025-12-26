@@ -7,7 +7,7 @@ async function loadparams() {
         " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoamp1ZW1ya3NsaGF6YmxmeHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk3MDA2NDYsImV4cCI6MjA1NTI3NjY0Nn0.J4TEhdwhN-oxtQQrc0lJZ6d7DG8fC2l0gwXw21AKVy0",
     },
   });
-  console.log(res);
+  //console.log(res);
   data = await res.json();
   createFactlist(data);
 }
@@ -40,4 +40,6 @@ btn.addEventListener("click", function () {
   }
 });
 
-console.dir(formlist);
+//console.dir(formlist);
+const result = [1, 2, 3, 5].filter((el) => el > 1);
+console.log(result);
