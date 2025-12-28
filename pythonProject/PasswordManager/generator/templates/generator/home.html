@@ -1,36 +1,50 @@
-{%extends 'generator/base.html'%}
+{% extends 'generator/base.html' %}
 {% load static %}
-{% block content%}
-<div class="tag-line">
-<h1>Privacy Starts with a <br>Strong Password<span class="exclamation">.</span></h1>
-    <p>Instant, randomized, and ironclad protection for your digital world.<br> Simple to use, impossible to guess.</p>
-    </div>
-<div class="box">
-    <h1 class="gen-txt">Generate a</h1>
-    <h1 class="ran-txt">random password</h1>
-    <p class="description-txt">Never use insecure password again.</p>
-    <br>
-{% if password_generated %}
-  <div class="copy-box">
-    <input type="text" id="generatedPassword"
-           value="{{ password_generated }}"
-           readonly>
 
-    <span class="copy-icon" onclick="copyPassword()" title="Copy">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <rect x="9" y="9" width="13" height="13" rx="2"
-              stroke="currentColor" stroke-width="2"/>
-        <rect x="2" y="2" width="13" height="13" rx="2"
-              stroke="currentColor" stroke-width="2"/>
-      </svg>
-    </span>
-    <span id="copyMsg" class="copy-msg">Copied!</span>
-  </div>
-{% endif %}
+{% block content %}
+<div class="tag-line">
+    <h1 id="tag-line">
+        Privacy Starts with a <br>
+        Strong {% if mode == 'pin' %}Pin{% else %}Password{% endif %}<span class="exclamation">.</span>
+    </h1>
+    <p>Instant, randomized, and ironclad protection for your digital world.<br> Simple to use, impossible to guess.</p>
+</div>
+
+<div class="box">
+    <div class="tabs-container">
+        <button type="button" id="passBtn" class="tab-btn {% if mode != 'pin' %}active{% endif %}" onclick="setMode('password')">Password</button>
+        <button type="button" id="pinBtn" class="tab-btn {% if mode == 'pin' %}active{% endif %}" onclick="setMode('pin')">PIN</button>
+    </div>
+
+    <h1 class="gen-txt">Generate a</h1>
+    <h1 class="ran-txt" id="modeTitle">random {% if mode == 'pin' %}pin{% else %}password{% endif %}</h1>
+    <p class="description-txt" id="modeDescr">Never use insecure {% if mode == 'pin' %}pin{% else %}password{% endif %} again.</p>
+
+    <br>
+
+    {% if password_generated %}
+    <div class="timer-container">
+        <div id="timerBar" class="timer-bar"></div>
+    </div>
+    <div class="copy-box">
+        <input type="text" id="generatedPassword" class="{% if mode == 'pin' %}pin-spacing{% endif %}" value="{{ password_generated }}" readonly>
+        <br>
+        <p id="expiryNote">Password cleared for your security.</p>
+        <span class="copy-icon" onclick="copyPassword()" title="Copy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="2" y="2" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </span>
+        <span id="copyMsg" class="copy-msg">Copied!</span>
+    </div>
+    {% endif %}
+
     <br><br>
-    <form method="post">
+
+    <form method="post" id="genForm">
         {% csrf_token %}
+        <input type="hidden" name="mode" id="modeInput" value="{{ mode|default:'password' }}">
         <button class="btn" type="submit">Generate</button>
     </form>
 </div>
