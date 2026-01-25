@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="mongoconnect">
+    <label>URI</label>
+    <textarea name="connection" rows="5" cols="80"></textarea>
+
+    <label>Name</label>
+    <input type="text">
+
+    <div class="button-group">
+        <button type="submit">Save</button>
+        <button type="submit" class="primary btn-connect">Save & Connect</button>
+    </div>
+</div>
+{% endblock %}

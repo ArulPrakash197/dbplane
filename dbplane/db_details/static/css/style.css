@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #e5f1e9;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  height: 15%;
+  background-color: #1c2430;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight:bold
+}
+
+.subtitle{
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color:#1c2430;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:10px;
+}
+
+
+/* Slide-out panel */
+.leftPanel {
+  position: fixed;
+  left: -72px;
+  top: 30%;
+  background-color: #1c2430;
+  padding: 12px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  transition: left 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.1);
+}
+
+.leftPanel::after {
+  content: '▶';
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1c2430;
+  color: #ffffff;
+  width: 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.leftPanel:hover {
+  left: 0;
+}
+
+.leftPanel:hover::after {
+  opacity: 0;
+}
+
+.panel-item {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.panel-item svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.panel-item.active {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.panel-item:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.panel-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 65px;
+  padding: 8px 14px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.panel-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Grid layout */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 300px); /* match container width */
+  grid-template-rows: repeat(2, 200px);    /* match container height */
+  column-gap: 40px;                       /* horizontal spacing */
+  row-gap: 40px;                           /* vertical spacing */
+  justify-content: center;                 /* center horizontally */
+  align-content: center;                   /* center vertically */
+  height: 100vh;
+margin-top: -70px;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  background-color: #1c2430;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.con-title {
+  all:unset;
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  -webkit-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+}
+.container-button{
+all:unset;
+cursor: pointer;
+transition: transform 0.1s ease;
+text-decoration: none; /* Removes underline */
+-webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.container-button:active {
+  transform: scale(0.95);
+}
+/*----------------------------------------------------------------
+#mongoconhtml*/
+.mongoconnect {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap: 15px;
+    padding: 30px;
+}
+
+.mongoconnect label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.mongoconnect textarea,
+.mongoconnect input {
+    padding: 8px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+}
+/*.button-group{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}*/
+
+
+/* Base button style (The default) */
+button, .btn {
+    all: unset;
+    display: inline-block; /* Essential since unset removes block properties */
+    padding: 10px 30px;
+    font-family: "Roboto", sans-serif;
+    background-color: #1c2430;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* Hover Effect */
+button:hover, .btn:hover {
+    background-color: #2a3647; /* Slightly lighter */
+}
+
+/* Click Effect (The "Press" feel) */
+button:active, .btn:active {
+    transform: scale(0.95); /* Shrinks the button slightly when clicked */
+}
+/* Secondary color variant */
+.btn-secondary {
+    background-color: #4a5568;
+}
+
+/* A "Success" or "Connect" variant */
+.btn-connect {
+    background-color: #27ae60;
+}
+
+.btn-connect:hover {
+    background-color: #2ecc71;
+}

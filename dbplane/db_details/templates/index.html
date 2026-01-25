@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- div class="subtitle">
+<p>Connection Details</p>
+</div -->
+<div class="wrapper">
+<div class="container">
+    <img src="{% static 'images/mongodb.png' %}" width="50" height="50">
+    <!--button ><p class="con-title">Mongo DB</p></button -->
+    <button class="container-button"><a class="con-title" href="{% url 'mongoCon'%}">Mongo DB</a></button>
+
+</div>
+<div class="container">
+        <img src="static/images/redis.png" width="50" height="50">
+    <button class="container-button"> <a class="con-title" href="{% url 'redisCon'%}">&nbsp;&nbsp;Redis</a></button>
+</div>
+<div class="container">
+    <img src="static/images/postgresql.png" width="50" height="50">
+    <button class="container-button"><a class="con-title" href="{% url 'postgresqlCon'%}">&nbsp;&nbsp;PostgreSQL</a></button>
+</div>
+<div class="container">
+        <img src="static/images/rabbitmq.png" width="50" height="50">
+    <button class="container-button"><a class="con-title" href="{% url 'rabbitmqCon'%}">&nbsp;&nbsp;Rabbit-mq</a></button>
+</div>
+</div>
+{% endblock %}
