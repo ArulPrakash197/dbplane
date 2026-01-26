@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<div class="mongo-add-con">
+   <div class="header-group">
+       <button type="button" class="back-link-btn" onclick="history.back()">
+        <span class="material-symbols-outlined">arrow_circle_left</span>
+    </button>
+           <h2>Add {{ db_type|title }} Connection</h2>
+   </div>
+
+    <form method="POST" class="mongoconnect">
+        {% csrf_token %}
+
+        <label>Display Name</label>
+        <input type="text" name="display_name" placeholder="eg: My {{ db_type|title }}">
+
+        {% if db_type == 'mongo' %}
+            <label>Connection URI</label>
+            <textarea name="connection" rows="3" placeholder="mongodb://localhost:27017"></textarea>
+
+        {% elif db_type == 'postgresql' %}
+            <label>Host</label>
+            <input type="text" name="host" placeholder="127.0.0.1">
+            <label>Port</label>
+            <input type="number" name="port" placeholder="5432">
+            <label>Database Name</label>
+            <input type="text" name="dbname" placeholder="postgres">
+            <label>Password</label>
+            <input type="password" name="password">
+
+        {% elif db_type == 'redis' %}
+            <label>Host</label>
+            <input type="text" name="host" placeholder="127.0.0.1">
+            <label>Port</label>
+            <input type="number" name="port" placeholder="6379">
+            <label>Password</label>
+            <input type="password" name="password">
+
+        {% elif db_type == 'rabbitmq' %}
+            <label>AMQP URI</label>
+            <input type="text" name="uri" placeholder="amqp://guest:guest@127.0.0.1:5672">
+        {% endif %}
+
+        <div class="button-group">
+            <button type="button" class="primary secondary-btn" onclick="history.back()">Cancel</button>
+            <button type="submit" class="primary">Save Connection</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
