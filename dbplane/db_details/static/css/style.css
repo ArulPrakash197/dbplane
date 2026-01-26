@@ -189,21 +189,70 @@ text-decoration: none; /* Removes underline */
     display: flex;
     flex-direction: column;
     width: 600px;
-    gap: 15px;
-    padding: 30px;
+    gap: 10px;
 }
 
 .mongoconnect label {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
 }
 
 .mongoconnect textarea,
 .mongoconnect input {
-    padding: 8px;
-    border: 1px solid #cccc;
-    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #1c2430;
+    border-radius: 5px;
+}
+.mongo-add-con{
+display:flex;
+flex-direction:column;
+width: 600px;
+margin:40px auto;
+gap: 10px;
+}
+.header-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* This moves the button outside the 600px box so the title aligns with labels */
+    position: relative;
+    left: -40px; /* Adjust this value based on button size to align title perfectly */
+    width: calc(100% + 45px);
+    gap:10px;
+}
+.back-link-btn {
+    /* 1. Complete Style Reset */
+    background: transparent !important; /* Forces transparency */
+    border: none !important;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;       /* Removes the blue/dark outline on click */
+    box-shadow: none;    /* Ensures no shadow appears */
+    -webkit-tap-highlight-color: transparent; /* Removes flash on mobile */
+
+    color: inherit;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+/* 2. Make the icon bigger */
+.back-link-btn .material-symbols-outlined {
+    font-size: 30px;
+    user-select: none; /* Prevents icon from being highlighted like text */
+}
+
+/* 3. Hover: No box, just a slight fade or subtle color shift */
+.back-link-btn:hover {
+    background: transparent; /* Re-confirming no background change */
+    opacity: 0.7;           /* Subtle visual hint instead of a box */
+}
+
+/* 4. The Clicky Effect */
+.back-link-btn:active {
+    transform: scale(0.85); /* Snappy shrink effect */
 }
 /*.button-group{
     display: flex;
@@ -251,4 +300,141 @@ button:active, .btn:active {
 
 .btn-connect:hover {
     background-color: #2ecc71;
+}
+
+/* mongo table design */
+/* Container for the whole page section */
+/* --- Page Layout --- */
+.page-content {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    color: #1c2430;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* --- Table Design --- */
+.table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    overflow: hidden; /* Keeps corners rounded */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Cells */
+.data-table thead {
+    background-color: #1c2430;
+    color: #ffffff;
+}
+
+.data-table th {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Body Cells */
+.data-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* DB Name styling */
+.db-identifier {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* --- Operations Column Spacing Fix --- */
+.col-sno { width: 80px; }
+.col-actions { width: 200px; text-align: center !important; }
+
+.actions-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Base spacing between icons */
+}
+
+.action-btn {
+    all: unset;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Divider to separate terminal from edit/delete */
+.action-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #d1d5db;
+    margin: 0 8px;
+}
+
+/* Icon Colors & Hovers */
+.action-btn.edit { color: #2563eb; }
+.action-btn.edit:hover { background: #dbeafe; }
+
+.action-btn.delete { color: #dc2626; }
+.action-btn.delete:hover { background: #fee2e2; }
+
+.action-btn.execute { color: #059669; }
+.action-btn.execute:hover { background: #d1fae5; }
+
+/* Plus Button Styling */
+.btn-connect-plus {
+    all: unset;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    gap: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-connect-plus:hover {
+    background-color: #219150;
+}
+
+.btn-connect-plus:active {
+    transform: scale(0.98);
 }

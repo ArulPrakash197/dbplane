@@ -20,8 +20,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('mongoCon/', views.mongoCon, name='mongoCon'),
-    path('redisCon/', views.redisCon, name='redisCon'),
-    path('postgresqlCon/', views.postgresqlCon, name='postgresqlCon'),
-    path('rabbitmqCon/', views.rabbitmqCon, name='rabbitmqCon'),
+path('connections/<str:db_type>/', views.db_list, name='db_list'),
+path('connections/<str:db_type>/add/', views.add_connection_form, name='add_connection_url'),
 ]

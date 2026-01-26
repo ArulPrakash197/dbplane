@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<div class="page-content">
+
+  <div class="header-section">
+    <div class="header-group">
+        <button type="button" class="back-link-btn" onclick="history.back()">
+        <span class="material-symbols-outlined back-link-btn">
+            arrow_circle_left
+        </span>
+        </button>
+        <h2 class="page-title">{{ db_type|title }} Connections</h2>
+    </div>
+
+    <button type="button" class="btn-connect-plus" onclick="location.href='{% url 'add_connection_url' db_type %}'">
+        <span class="material-symbols-outlined">add</span>
+        Add {{ db_type|title }} Connection
+    </button>
+</div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th class="col-sno">S.No</th>
+                    <th class="col-dbname">Database Name</th>
+                    <th class="col-actions">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for con in connections %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td class="db-identifier">{{ con.name }}</td>
+                    <td>
+                        <div class="actions-wrapper">
+                            <button class="action-btn edit" title="Edit">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                            <button class="action-btn delete" title="Delete">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                            <div class="action-divider"></div>
+                            <button class="action-btn execute" title="Query Console">
+                                <span class="material-symbols-outlined">terminal</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3" style="text-align:center;">No {{ db_type }} connections found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
