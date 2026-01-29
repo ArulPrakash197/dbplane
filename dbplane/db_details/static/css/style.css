@@ -159,11 +159,18 @@ margin-top: -70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.container:hover {
+  transform: scale(1.05); /* subtle zoom */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .con-title {
   all:unset;
   text-decoration: none;
+  background: transparent;
   color: white;
   font-size: 32px;
   text-align: center;
@@ -183,6 +190,7 @@ text-decoration: none; /* Removes underline */
 .container-button:active {
   transform: scale(0.95);
 }
+
 /*----------------------------------------------------------------
 #mongoconhtml*/
 .mongoconnect {
@@ -281,7 +289,7 @@ button, .btn {
 
 /* Hover Effect */
 button:hover, .btn:hover {
-    background-color: #2a3647; /* Slightly lighter */
+    background-color: transparent !important; /* Slightly lighter */
 }
 
 /* Click Effect (The "Press" feel) */
@@ -454,7 +462,7 @@ button:active, .btn:active {
 }
 
 .btn-connect-plus:hover {
-    background-color: #219150;
+    background-color: transparent !important;
 }
 
 .btn-connect-plus:active {
