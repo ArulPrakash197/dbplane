@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-path('connections/<str:db_type>/', views.db_list, name='db_list'),
-path('connections/<str:db_type>/add/', views.add_connection_form, name='add_connection_url'),
+    path('connections/<str:db_type>/', views.db_list, name='db_list'),
+    path('connections/<str:db_type>/add/', views.add_connection_form, name='add_connection_url'),
+    path('connections/<str:db_type>/terminal_popup/', views.terminal_popup, name='terminal_popup'),
 ]

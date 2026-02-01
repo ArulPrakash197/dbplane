@@ -88,3 +88,6 @@ def db_list(request, db_type):
 def add_connection_form(request, db_type):
     # This view will serve the form page with the {% if %} logic we discussed
     return render(request, 'add_connection.html', {'db_type': db_type})
+
+def terminal_popup(request, db_type):
+    return render(request, 'terminal_popup.html', {'db_type': db_type})

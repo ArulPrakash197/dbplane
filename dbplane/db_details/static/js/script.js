@@ -44,3 +44,10 @@ function confirmDelete() {
     console.log("Deleted")
     closeModal();
 }
+function openPopup(url){
+window.open(url,
+        "Terminal",
+        "width=900,height=900,top=500,left=100,resizable=yes,scrollbars=yes"
+    );
+
+}
