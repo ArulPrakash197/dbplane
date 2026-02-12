@@ -18,44 +18,89 @@
         {% csrf_token %}
 
         <label>Display Name</label>
-        <input type="text" name="display_name" placeholder="eg: My {{ db_type|title }}">
+        <input
+            type="text"
+            name="display_name"
+            placeholder="eg: My {{ db_type|title }}"
+            value="{{ form_data.display_name|default:'' }}"
+            class="{% if errors.display_name %}input-error{% endif %}"
+        >
+        {% if errors.display_name %}
+          <div class="field-error">{{ errors.display_name }}</div>
+        {% endif %}
 
         {% if db_type == 'mongo' %}
             <label>Connection URI</label>
-            <textarea name="connection" rows="3" placeholder="mongodb://localhost:27017"></textarea>
+            <textarea
+                name="connection"
+                rows="3"
+                placeholder="mongodb://localhost:27017"
+                class="{% if errors.uri %}input-error{% endif %}"
+            >{{ form_data.uri|default:'' }}</textarea>
+
+            {% if errors.uri %}
+                <div class="field-error">{{ errors.uri }}</div>
+            {% endif %}
 
         {% elif db_type == 'postgresql' %}
             <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1">
+            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+
             <label>Port</label>
-            <input type="number" name="port" placeholder="5432">
+            <input type="number" name="port" placeholder="5432" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+
             <label>Database Name</label>
-            <input type="text" name="dbname" placeholder="postgres">
+            <input type="text" name="dbname" placeholder="postgres" value="{{ form_data.database|default:'' }}" class="{% if errors.database %}input-error{% endif %}">
+            {% if errors.database %}<div class="field-error">{{ errors.database }}</div>{% endif %}
+
             <label>Password</label>
             {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
+            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
 
         {% elif db_type == 'redis' %}
             <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1">
+            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+
             <label>Port</label>
-            <input type="number" name="port" placeholder="6379">
+            <input type="number" name="port" placeholder="6379" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+
             <label>Password</label>
-        {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
+            {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
+            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
+
         {% elif db_type == 'rabbitmq' %}
             <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1">
+            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+
             <label>Port</label>
-            <input type="number" name="port" placeholder="15672">
+            <input type="number" name="port" placeholder="15672" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+
             <label>Password</label>
-        {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
+            {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
+            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
         {% endif %}
 
         <div class="button-group">
-            <button type="button" class="primary secondary-btn" onclick="location.href='{% url 'db_list' db_type%}'">Cancel</button>
-            <button type="submit" class="primary">Save Connection</button>
+            <button type="button" class="primary secondary-btn"
+                    onclick="location.href='{% url 'db_list' db_type %}'">
+                Cancel
+            </button>
+
+            <!-- Test and Save buttons -->
+            <button type="submit" name="action" value="test" class="primary secondary-btn">
+                Test Connection
+            </button>
+            <button type="submit" name="action" value="save" class="primary">
+                Save Connection
+            </button>
         </div>
     </form>
 </div>
-
 
 {% endblock %}
