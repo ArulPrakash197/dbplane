@@ -1,0 +1,27 @@
+{
+    "postgresql": [
+        {
+            "host": "10.0.4.7",
+            "port": "5432",
+            "database": "testdb",
+            "password": "Test@123"
+        },
+        {
+            "display_name": "Test1",
+            "host": "10.0.4.7",
+            "port": "5432",
+            "database": "testdb",
+            "password": "Test@123"
+        },
+        {
+            "display_name": "Test2",
+            "host": "10.0.4.7",
+            "port": "5432",
+            "database": "testdb",
+            "password": ""
+        }
+    ],
+    "mongo": [],
+    "redis": [],
+    "rabbitmq": []
+}

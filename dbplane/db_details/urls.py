@@ -16,11 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from .views import (
+    IndexView,
+    AddConnectionView,
+    DatabaseListView,
+    DeleteConnectionView,
+    EditConnectionView,
+    TerminalPopupView,
+    )
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('connections/<str:db_type>/', views.db_list, name='db_list'),
-    path('connections/<str:db_type>/add/', views.add_connection_form, name='add_connection_url'),
-    path('connections/<str:db_type>/terminal_popup/', views.terminal_popup, name='terminal_popup'),
+    path("", IndexView.as_view(), name="home"),
+    path("db/<str:db_type>/", DatabaseListView.as_view(), name="db_list"),
+    path("db/<str:db_type>/add/", AddConnectionView.as_view(), name="add_connection_url"),
+    path("db/<str:db_type>/delete/<int:index>/", DeleteConnectionView.as_view(), name="delete_connection"),
+    path("db/<str:db_type>/edit/<int:index>/", EditConnectionView.as_view(), name="edit_connection"),
+    path("db/<str:db_type>/terminal/", TerminalPopupView.as_view(), name="terminal_popup"),
 ]

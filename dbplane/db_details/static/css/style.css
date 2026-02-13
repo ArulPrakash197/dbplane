@@ -7,7 +7,8 @@
 html, body {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: #e5f1e9;
   font-family: "Roboto", sans-serif;
 }
@@ -264,14 +265,19 @@ gap: 10px;
 .back-link-btn:active {
     transform: scale(0.85); /* Snappy shrink effect */
 }
-/*.button-group{
+.button-group{
     display: flex;
-    flex-direction: row;
     gap: 10px;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+    background-color: #e5f1e9;
+    padding: 12px 0;
+    z-index: 10;
     justify-content: flex-start;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-}*/
+}
 
 
 /* Base button style (The default) */
@@ -508,4 +514,70 @@ button:active, .btn:active {
 /* 4. Update this to flex so the 'gap' property works */
 .makeitvisible {
   display: flex !important;
+}
+
+/* Toast Messages */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 280px;
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideIn 0.3s forwards, fadeOut 0.3s forwards 3s;
+}
+
+/* Message types */
+.toast-success { background: #2ecc71; }
+.toast-error   { background: #e74c3c; }
+.toast-warning { background: #f39c12; }
+.toast-info    { background: #3498db; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+/* Inline Error Messages */
+.field-error {
+  color: #fc0000;
+  font-size: 12px;
+  margin: 2px 0 6px;   /* 👈 tight vertical spacing */
+  line-height: 1.1;
+}
+
+/* Error input highlight */
+.input-error {
+    border: 2px solid #f43a3a !important;
+}
+
+/* Optional: focus effect */
+.input-error:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(237, 69, 69);
+}
+
+/* Auto-reset border when user types */
+input:not(:placeholder-shown).input-error,
+textarea:not(:placeholder-shown).input-error {
+    border: 1px solid #1c2430 !important;
 }

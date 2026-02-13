@@ -1,0 +1,72 @@
+2026-02-10 00:50:22,280 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 00:50:22,280 | WARNING | Validation failed | errors={'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 00:50:30,476 | INFO | AddConnection POST | db=postgresql | action=save
+2026-02-10 00:50:30,477 | WARNING | Validation failed | errors={'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:07:13,698 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:07:13,700 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:07:44,663 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:07:44,663 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:14:04,245 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:14:04,245 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:14:11,353 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:14:11,353 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:20:01,988 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:20:01,988 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:20:07,182 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:20:07,182 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:20:15,604 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:20:15,604 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:20:27,057 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:20:27,057 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:23:51,068 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:23:51,069 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:24:11,935 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:24:11,935 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:30:15,880 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:30:15,881 | WARNING | Validation failed | {'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:30:35,650 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:30:35,650 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:31:25,181 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:31:25,181 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:31:49,666 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:31:49,666 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:31:51,596 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:31:51,596 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:33:37,356 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:33:37,356 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:33:46,995 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:33:46,995 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:34:08,396 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:34:08,397 | WARNING | Validation failed | {'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:36:32,912 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:36:32,912 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:38:09,557 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:38:09,558 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:38:21,558 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:38:21,559 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:38:22,416 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:38:22,416 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:38:22,842 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:38:22,842 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:38:23,107 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:38:23,107 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:39:39,159 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:39:39,160 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:39:58,098 | INFO | AddConnection POST | db=postgresql | action=save
+2026-02-10 01:39:58,099 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:40:30,927 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:40:30,928 | INFO | Connection test successful
+2026-02-10 01:47:50,787 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:47:50,787 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:48:08,482 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-10 01:48:08,483 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-10 01:48:41,070 | INFO | AddConnection POST | db=redis | action=test
+2026-02-10 01:48:41,070 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required'}
+2026-02-10 01:48:51,033 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:48:51,033 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:51:28,593 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:51:28,594 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:51:49,580 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:51:49,580 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-10 01:53:35,412 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-10 01:53:35,412 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
