@@ -581,3 +581,75 @@ input:not(:placeholder-shown).input-error,
 textarea:not(:placeholder-shown).input-error {
     border: 1px solid #1c2430 !important;
 }
+
+/* Terminal popup */
+#db-terminal-wrapper {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 20px;
+}
+
+#db-terminal-wrapper .db-terminal-header {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+#db-terminal-wrapper .db-terminal-output {
+    height: 400px;
+    background-color: #000;
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+
+#db-terminal-wrapper .db-terminal-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+#db-terminal-wrapper .db-terminal-prompt {
+    color: #00ff00;
+}
+
+#db-terminal-wrapper #db-terminal-command {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    font-family: monospace;
+    resize: none;
+}
+
+#db-terminal-wrapper #db-terminal-run-btn {
+    padding: 8px 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#db-terminal-wrapper #db-terminal-run-btn:hover {
+    background-color: #555;
+}
+
+#db-terminal-wrapper .db-terminal-cursor {
+    width: 10px;
+    height: 18px;
+    background-color: #00ff00;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+#db-terminal-wrapper .db-terminal-loading {
+    display: none;
+    color: yellow;
+    margin-top: 5px;
+}

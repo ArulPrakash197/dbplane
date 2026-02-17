@@ -70,3 +70,158 @@
 2026-02-10 01:51:49,580 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
 2026-02-10 01:53:35,412 | INFO | AddConnection POST | db=mongo | action=test
 2026-02-10 01:53:35,412 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-17 15:53:17,095 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-17 15:53:17,095 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-17 15:54:57,742 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-17 15:54:57,743 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-17 23:08:00,004 | INFO | Connection deleted | db=postgresql | index=1
+2026-02-17 23:08:43,036 | INFO | Connection deleted | db=postgresql | index=0
+2026-02-17 23:09:16,599 | INFO | AddConnection POST | db=postgresql | action=save
+2026-02-17 23:09:16,601 | INFO | Connection saved successfully
+2026-02-17 23:18:56,176 | INFO | Loading connections
+2026-02-17 23:18:56,176 | INFO | Connections loaded successfully
+2026-02-17 23:19:16,622 | INFO | AddConnection POST | db=mongo | action=save
+2026-02-17 23:19:16,622 | INFO | Adding connection | db=mongo
+2026-02-17 23:19:16,622 | INFO | Loading connections
+2026-02-17 23:19:16,622 | INFO | Connections loaded successfully
+2026-02-17 23:19:16,623 | INFO | Saved Connections successfully
+2026-02-17 23:19:16,623 | INFO | Connection added successfully | db=mongo | name=Test1
+2026-02-17 23:19:16,623 | INFO | Connection saved successfully
+2026-02-17 23:19:16,628 | INFO | Loading connections
+2026-02-17 23:19:16,638 | INFO | Connections loaded successfully
+2026-02-17 23:19:28,608 | INFO | AddConnection POST | db=mongo | action=save
+2026-02-17 23:19:28,608 | INFO | Adding connection | db=mongo
+2026-02-17 23:19:28,608 | INFO | Loading connections
+2026-02-17 23:19:28,609 | INFO | Connections loaded successfully
+2026-02-17 23:19:28,609 | INFO | Saved Connections successfully
+2026-02-17 23:19:28,610 | INFO | Connection added successfully | db=mongo | name=Test2
+2026-02-17 23:19:28,610 | INFO | Connection saved successfully
+2026-02-17 23:19:28,619 | INFO | Loading connections
+2026-02-17 23:19:28,632 | INFO | Connections loaded successfully
+2026-02-17 23:19:53,639 | INFO | Loading connections
+2026-02-17 23:19:53,639 | INFO | Connections loaded successfully
+2026-02-17 23:20:11,279 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:11,279 | INFO | Adding connection | db=redis
+2026-02-17 23:20:11,279 | INFO | Loading connections
+2026-02-17 23:20:11,279 | INFO | Connections loaded successfully
+2026-02-17 23:20:11,280 | INFO | Saved Connections successfully
+2026-02-17 23:20:11,280 | INFO | Connection added successfully | db=redis | name=Test1
+2026-02-17 23:20:11,280 | INFO | Connection saved successfully
+2026-02-17 23:20:11,285 | INFO | Loading connections
+2026-02-17 23:20:11,295 | INFO | Connections loaded successfully
+2026-02-17 23:20:22,410 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:22,410 | INFO | Adding connection | db=redis
+2026-02-17 23:20:22,410 | INFO | Loading connections
+2026-02-17 23:20:22,411 | INFO | Connections loaded successfully
+2026-02-17 23:20:22,411 | INFO | Saved Connections successfully
+2026-02-17 23:20:22,411 | INFO | Connection added successfully | db=redis | name=Test2
+2026-02-17 23:20:22,411 | INFO | Connection saved successfully
+2026-02-17 23:20:22,415 | INFO | Loading connections
+2026-02-17 23:20:22,427 | INFO | Connections loaded successfully
+2026-02-17 23:20:38,037 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:38,037 | INFO | Adding connection | db=redis
+2026-02-17 23:20:38,037 | INFO | Loading connections
+2026-02-17 23:20:38,037 | INFO | Connections loaded successfully
+2026-02-17 23:20:38,038 | INFO | Saved Connections successfully
+2026-02-17 23:20:38,038 | INFO | Connection added successfully | db=redis | name=Test13
+2026-02-17 23:20:38,038 | INFO | Connection saved successfully
+2026-02-17 23:20:38,041 | INFO | Loading connections
+2026-02-17 23:20:38,053 | INFO | Connections loaded successfully
+2026-02-17 23:20:42,394 | INFO | Deleting connection | db=redis | index=2
+2026-02-17 23:20:42,394 | INFO | Loading connections
+2026-02-17 23:20:42,395 | INFO | Connections loaded successfully
+2026-02-17 23:20:42,395 | INFO | Saved Connections successfully
+2026-02-17 23:20:42,396 | INFO | Connection deleted | db=redis | name=Test13
+2026-02-17 23:20:42,396 | INFO | Connection deleted | db=redis | index=2
+2026-02-17 23:20:42,401 | INFO | Loading connections
+2026-02-17 23:20:42,403 | INFO | Connections loaded successfully
+2026-02-17 23:20:47,670 | INFO | Loading connections
+2026-02-17 23:20:47,670 | INFO | Connections loaded successfully
+2026-02-17 23:20:59,987 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:20:59,987 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:20:59,987 | INFO | Loading connections
+2026-02-17 23:20:59,987 | INFO | Connections loaded successfully
+2026-02-17 23:20:59,988 | INFO | Saved Connections successfully
+2026-02-17 23:20:59,988 | INFO | Connection added successfully | db=rabbitmq | name=Test1
+2026-02-17 23:20:59,988 | INFO | Connection saved successfully
+2026-02-17 23:20:59,992 | INFO | Loading connections
+2026-02-17 23:21:00,004 | INFO | Connections loaded successfully
+2026-02-17 23:21:18,320 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:18,320 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:21:18,320 | INFO | Loading connections
+2026-02-17 23:21:18,320 | INFO | Connections loaded successfully
+2026-02-17 23:21:18,320 | WARNING | Duplicate connection name: Test1
+2026-02-17 23:21:18,320 | WARNING | Database name already exists
+2026-02-17 23:21:26,785 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:26,786 | WARNING | Validation failed | {'password': 'This field is required'}
+2026-02-17 23:21:31,302 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:31,302 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:21:31,302 | INFO | Loading connections
+2026-02-17 23:21:31,302 | INFO | Connections loaded successfully
+2026-02-17 23:21:31,303 | INFO | Saved Connections successfully
+2026-02-17 23:21:31,303 | INFO | Connection added successfully | db=rabbitmq | name=Test2
+2026-02-17 23:21:31,303 | INFO | Connection saved successfully
+2026-02-17 23:21:31,307 | INFO | Loading connections
+2026-02-17 23:21:31,321 | INFO | Connections loaded successfully
+2026-02-17 23:22:24,618 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:22:24,618 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:22:24,619 | INFO | Loading connections
+2026-02-17 23:22:24,619 | INFO | Connections loaded successfully
+2026-02-17 23:22:24,619 | WARNING | Duplicate connection name: Test1
+2026-02-17 23:22:24,619 | WARNING | Display name already exists
+2026-02-17 23:22:28,532 | INFO | Loading connections
+2026-02-17 23:22:28,532 | INFO | Connections loaded successfully
+2026-02-17 23:23:02,220 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:23:02,220 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:23:02,221 | INFO | Loading connections
+2026-02-17 23:23:02,221 | INFO | Connections loaded successfully
+2026-02-17 23:23:02,221 | WARNING | Duplicate connection name: Test2
+2026-02-17 23:23:02,221 | INFO | Saved Connections successfully
+2026-02-17 23:23:02,222 | INFO | Connection added successfully | db=rabbitmq | name=Test2
+2026-02-17 23:23:02,222 | INFO | Connection saved successfully
+2026-02-17 23:23:02,226 | INFO | Loading connections
+2026-02-17 23:23:02,242 | INFO | Connections loaded successfully
+2026-02-17 23:23:10,960 | INFO | Deleting connection | db=rabbitmq | index=2
+2026-02-17 23:23:10,960 | INFO | Loading connections
+2026-02-17 23:23:10,961 | INFO | Connections loaded successfully
+2026-02-17 23:23:10,961 | INFO | Saved Connections successfully
+2026-02-17 23:23:10,961 | INFO | Connection deleted | db=rabbitmq | name=Test2
+2026-02-17 23:23:10,961 | INFO | Connection deleted | db=rabbitmq | index=2
+2026-02-17 23:23:10,969 | INFO | Loading connections
+2026-02-17 23:23:10,971 | INFO | Connections loaded successfully
+2026-02-17 23:23:29,206 | INFO | Loading connections
+2026-02-17 23:23:29,207 | INFO | Connections loaded successfully
+2026-02-17 23:23:39,851 | INFO | Loading connections
+2026-02-17 23:23:39,852 | INFO | Connections loaded successfully
+2026-02-17 23:30:49,674 | INFO | Loading connections
+2026-02-17 23:30:49,685 | INFO | Connections loaded successfully
+2026-02-17 23:31:29,021 | INFO | Loading connections
+2026-02-17 23:31:29,021 | INFO | Connections loaded successfully
+2026-02-17 23:31:33,513 | INFO | Loading connections
+2026-02-17 23:31:33,514 | INFO | Connections loaded successfully
+2026-02-17 23:31:35,545 | INFO | Loading connections
+2026-02-17 23:31:35,545 | INFO | Connections loaded successfully
+2026-02-17 23:41:19,527 | INFO | Loading connections
+2026-02-17 23:41:19,527 | INFO | Connections loaded successfully
+2026-02-17 23:56:10,908 | INFO | Loading connections
+2026-02-17 23:56:10,909 | INFO | Connections loaded successfully
+2026-02-17 23:56:46,108 | INFO | Updating connection | db=postgresql | index=0
+2026-02-17 23:56:46,108 | INFO | Loading connections
+2026-02-17 23:56:46,108 | INFO | Connections loaded successfully
+2026-02-17 23:56:46,109 | INFO | Saved Connections successfully
+2026-02-17 23:56:46,109 | INFO | Connection updated successfully | db=postgresql
+2026-02-17 23:56:46,109 | INFO | Connection updated | db=postgresql | index=0
+2026-02-17 23:56:46,113 | INFO | Loading connections
+2026-02-17 23:56:46,127 | INFO | Connections loaded successfully
+2026-02-17 23:56:49,683 | INFO | Loading connections
+2026-02-17 23:56:49,684 | INFO | Connections loaded successfully
+2026-02-17 23:56:53,795 | INFO | Updating connection | db=postgresql | index=1
+2026-02-17 23:56:53,795 | INFO | Loading connections
+2026-02-17 23:56:53,796 | INFO | Connections loaded successfully
+2026-02-17 23:56:53,796 | WARNING | Duplicate during edit | db=postgresql | index=1 | error=Database name already exists
+2026-02-17 23:56:59,021 | INFO | Loading connections
+2026-02-17 23:56:59,022 | INFO | Connections loaded successfully
+2026-02-18 00:00:46,972 | INFO | Loading connections
+2026-02-18 00:00:46,972 | INFO | Connections loaded successfully
+2026-02-18 00:00:52,714 | INFO | Loading connections
+2026-02-18 00:00:52,715 | INFO | Connections loaded successfully

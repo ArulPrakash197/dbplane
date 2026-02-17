@@ -1,6 +1,8 @@
 from django.views import View
 from django.shortcuts import render, redirect
 from django.contrib import messages
+import json
+from django.http import JsonResponse
 
 from .logger import get_logger
 from .services.connection_store import (
@@ -9,6 +11,7 @@ from .services.connection_store import (
     delete_connection,
     update_connection,
 )
+from .services.terminal_service import VirtualTerminal
 
 # OPTIONAL: if you already have real test services, import them
 from .services.postgres_service import test_postgres
@@ -180,9 +183,13 @@ class AddConnectionView(View):
 # --------------------------------------------------
 class DeleteConnectionView(View):
     def post(self, request, db_type, index):
-        delete_connection(db_type, index)
-        messages.success(request, "Connection deleted successfully")
-        logger.info(f"Connection deleted | db={db_type} | index={index}")
+        try:
+            delete_connection(db_type, index)
+            messages.success(request, "Connection deleted successfully")
+            logger.info(f"Connection deleted | db={db_type} | index={index}")
+        except Exception as e:
+            messages.error(request, "Failed to delete connection")
+            logger.error(f"Delete failed | db={db_type} | index={index} | error={e}")
         return redirect("db_list", db_type=db_type)
 
 
@@ -192,20 +199,69 @@ class DeleteConnectionView(View):
 class EditConnectionView(View):
     def get(self, request, db_type, index):
         connections = load_connections()
-        return render(request, "edit_connection.html", {
+        try:
+            connection = connections[db_type][int(index)]
+        except (KeyError, IndexError):
+            messages.error(request, "Connection not found")
+            return redirect("db_list", db_type=db_type)
+        return render(request, "add_connection.html", {
             "db_type": db_type,
-            "connection": connections[db_type][index],
-            "index": index
+            "form_data": connection,
+            "errors": {},
+            "index": index,
+            "edit_mode": True
         })
 
     def post(self, request, db_type, index):
-        payload = dict(request.POST)
-        payload.pop("csrfmiddlewaretoken", None)
+        payload = {}
 
-        update_connection(db_type, index, payload)
+        if db_type == "postgresql":
+            payload = {
+                "display_name": request.POST.get("display_name", "").strip(),
+                "host": request.POST.get("host", "").strip(),
+                "port": request.POST.get("port", "").strip(),
+                "database": request.POST.get("dbname", "").strip(),
+                "password": request.POST.get("password", "").strip(),
+            }
+        elif db_type == "mongo":
+            payload = {
+                "display_name": request.POST.get("display_name", "").strip(),
+                "uri": request.POST.get("connection", "").strip(),
+            }
+        elif db_type == "redis":
+            payload = {
+                "display_name": request.POST.get("display_name", "").strip(),
+                "host": request.POST.get("host", "").strip(),
+                "port": request.POST.get("port", "").strip(),
+                "password": request.POST.get("password", "").strip(),
+            }
 
-        messages.success(request, "Connection updated successfully")
-        logger.info(f"Connection updated | db={db_type} | index={index}")
+        elif db_type == "rabbitmq":
+            payload = {
+                "display_name": request.POST.get("display_name", "").strip(),
+                "host": request.POST.get("host", "").strip(),
+                "port": request.POST.get("port", "").strip(),
+                "password": request.POST.get("password", "").strip(),
+            }
+
+        try:
+            update_connection(db_type, index, payload)
+            messages.success(request, "Connection updated successfully")
+            logger.info(f"Connection updated | db={db_type} | index={index}")
+        except ValueError as e:
+            logger.warning(f"Duplicate during edit | db={db_type} | index={index} | error={e}")
+            messages.error(request, str(e))
+
+            return render(request, "add_connection.html", {
+                "db_type": db_type,
+                "form_data": payload,
+                "errors": {"display_name": str(e)},
+                "index": index,
+                "edit_mode": True
+            })
+        except Exception as e:
+            messages.error(request, "Update failed")
+            logger.error(f"Update failed | db={db_type} | index={index} | error={e}")
 
         return redirect("db_list", db_type=db_type)
 
@@ -215,6 +271,85 @@ class EditConnectionView(View):
 # --------------------------------------------------
 class TerminalPopupView(View):
     def get(self, request, db_type):
+        index = request.GET.get("index", 0)
         return render(request, "terminal_popup.html", {
-            "db_type": db_type
+            "db_type": db_type,
+            "index": index
         })
+
+class TerminalExecuteView(View):
+    def post(self, request):
+        try:
+            data = json.loads(request.body)
+            db_type = data.get("db_type")
+            index = data.get("index")
+            command = data.get("command")
+            terminal = VirtualTerminal(db_type, index)
+            output = terminal.execute(command)
+            return JsonResponse({
+                "success": True,
+                "output": output
+            })
+        except Exception as e:
+            return JsonResponse({
+                "success": False,
+                "output": str(e)
+            })
+        
+class TerminalAutocompleteView(View):
+    def post(self, request):
+        try:
+            data = json.loads(request.body)
+
+            db_type = data.get("db_type")
+            index = data.get("index")
+
+            terminal = VirtualTerminal(db_type, index)
+            tables = terminal.get_tables()
+
+            return JsonResponse({
+                "success": True,
+                "tables": tables
+            })
+
+        except Exception as e:
+            return JsonResponse({
+                "success": False,
+                "tables": []
+            })
+        
+# --------------------------------------------------
+# TERMINAL CONNECT (VALIDATE BEFORE OPENING)
+# --------------------------------------------------
+class TerminalConnectView(View):
+    def post(self, request):
+        try:
+            data = json.loads(request.body)
+
+            db_type = data.get("db_type")
+            index = data.get("index")
+
+            terminal = VirtualTerminal(db_type, index)
+
+            # 🔹 Try lightweight test query
+            if db_type == "postgresql":
+                terminal.execute("SELECT 1;")
+
+            elif db_type == "mongo":
+                terminal.execute('{"collection":"system.version","action":"find","filter":{}}')
+
+            elif db_type == "redis":
+                terminal.execute("PING")
+
+            elif db_type == "rabbitmq":
+                terminal.execute("status")
+
+            return JsonResponse({
+                "success": True
+            })
+
+        except Exception as e:
+            return JsonResponse({
+                "success": False,
+                "error": str(e)
+            })
