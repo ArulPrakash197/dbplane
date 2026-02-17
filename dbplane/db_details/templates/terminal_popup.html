@@ -1,10 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Terminal</title>
+    <title>{{ db_type|title }} Terminal</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
+<div id="db-terminal-wrapper" data-db-type="{{ db_type }}" data-index="{{ index }}">
+
+    <div class="db-terminal-header">
+        {{ db_type|upper }} DATABASE TERMINAL
+    </div>
+
+    <!-- <textarea id="db-terminal-output" readonly></textarea> -->
+     <div id="db-terminal-output" class="db-terminal-output"></div>
+
+    <div class="db-terminal-input-area">
+        <span id="db-terminal-prompt" class="db-terminal-prompt"></span>
+        <textarea id="db-terminal-command" rows="1"></textarea>
+        <span id="db-terminal-cursor" class="db-terminal-cursor"></span>
+    </div>
+    <div id="db-terminal-loading" class="db-terminal-loading">
+        Running query...
+    </div>
+
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

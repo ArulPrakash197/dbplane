@@ -43,30 +43,21 @@
           </td>
           <td>
             <div class="actions-wrapper">
-              <button type="button" class="action-btn edit" title="Edit" onclick="openPopup()">
+              <button type="button" class="action-btn edit" title="Edit" onclick="location.href='{% url 'edit_connection' db_type forloop.counter0 %}'">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25" height="25">
                   <path fill="currentColor" d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
                 </svg>
               </button>
 
-              <button type="button" class="action-btn delete" title="Delete" onclick="openModal()">
+              <button type="button" class="action-btn delete" title="Delete" onclick="openDeleteModal('{% url 'delete_connection' db_type forloop.counter0 %}')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25" height="25">
                   <path fill="currentColor" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
                 </svg>
               </button>
 
-              <div id="modalOverlay" class="overlay"></div>
-              <div id="deleteModal" class="modal">
-                <h3>Are you sure?</h3>
-                <div class="modal-buttons">
-                  <button onclick="closeModal()">Cancel</button>
-                  <button onclick="confirmDelete()">Delete</button>
-                </div>
-              </div>
-
               <div class="action-divider"></div>
               <button type="button" class="action-btn execute" title="Query Console"
-                onclick="openPopup('{% url 'terminal_popup' db_type %}')">
+                onclick="openTerminal('{{ db_type }}', {{ forloop.counter0 }})">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25" height="25">
                   <path fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm120-80 120-120-120-120-56 56 64 64-64 64 56 56Zm200 0h160v-80H480v80Z"/>
                 </svg>
@@ -87,4 +78,20 @@
   </div>
 
 </div>
+
+<form method="post" id="deleteForm">
+  {% csrf_token %}
+
+  <div id="modalOverlay" class="overlay"></div>
+
+  <div id="deleteModal" class="modal">
+    <h3>Are you sure?</h3>
+    <p>This action cannot be undone.</p>
+
+    <div class="modal-buttons">
+      <button type="button" onclick="closeModal()">Cancel</button>
+      <button type="submit" class="danger">Delete</button>
+    </div>
+  </div>
+</form>
 {% endblock %}

@@ -14,7 +14,13 @@
            <h2>Add {{ db_type|title }} Connection</h2>
    </div>
 
-    <form method="POST" class="mongoconnect">
+    <form method="POST" 
+    action="{% if edit_mode %}
+                {% url 'edit_connection' db_type index %}
+              {% else %}
+                {% url 'add_connection_url' db_type %}
+              {% endif %}"
+    class="mongoconnect">
         {% csrf_token %}
 
         <label>Display Name</label>
