@@ -23,7 +23,11 @@ from .views import (
     DeleteConnectionView,
     EditConnectionView,
     TerminalPopupView,
+    TerminalExecuteView,
+    TerminalAutocompleteView,
+    TerminalConnectView,
     )
+
 
 urlpatterns = [
     path("", IndexView.as_view(), name="home"),
@@ -32,4 +36,7 @@ urlpatterns = [
     path("db/<str:db_type>/delete/<int:index>/", DeleteConnectionView.as_view(), name="delete_connection"),
     path("db/<str:db_type>/edit/<int:index>/", EditConnectionView.as_view(), name="edit_connection"),
     path("db/<str:db_type>/terminal/", TerminalPopupView.as_view(), name="terminal_popup"),
+    path("db/terminal/execute/", TerminalExecuteView.as_view(), name="terminal_execute"),
+    path("db/terminal/autocomplete/", TerminalAutocompleteView.as_view(), name="terminal_autocomplete"),
+    path("db/terminal/connect/", TerminalConnectView.as_view(), name="terminal_connect"),
 ]
