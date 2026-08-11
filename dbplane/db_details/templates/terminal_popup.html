@@ -12,7 +12,20 @@
 <div id="db-terminal-wrapper" data-db-type="{{ db_type }}" data-index="{{ index }}">
 
     <div class="db-terminal-header">
-        {{ db_type|upper }} DATABASE TERMINAL
+        <div class="terminal-title">{{ db_type|upper }} DATABASE TERMINAL</div>
+        <div class="terminal-actions">
+            <button id="exportBtn" class="terminal-btn">
+                Export ▼
+            </button>
+            <div id="exportDropdown" class="export-dropdown">
+                <div class="export-option" data-format="csv">
+                    Export as CSV
+                </div>
+                <div class="export-option" data-format="json">
+                    Export as JSON
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- <textarea id="db-terminal-output" readonly></textarea> -->
@@ -20,7 +33,7 @@
 
     <div class="db-terminal-input-area">
         <span id="db-terminal-prompt" class="db-terminal-prompt"></span>
-        <textarea id="db-terminal-command" rows="1"></textarea>
+        <textarea id="db-terminal-command" rows="10"></textarea>
         <span id="db-terminal-cursor" class="db-terminal-cursor"></span>
     </div>
     <div id="db-terminal-loading" class="db-terminal-loading">

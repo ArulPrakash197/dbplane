@@ -37,34 +37,140 @@ class VirtualTerminal:
 
     def _postgres(self, command):
         try:
+        # -----------------------------------
+        # 1. Handle meta commands (minimal)
+        # -----------------------------------
+            if command == "\\conninfo":
+                return {
+                    "message": f"""
+    You are connected to database "{self.conn_data['database']}"
+    as user "{self.conn_data['username']}"
+    on host "{self.conn_data['host']}"
+    port "{self.conn_data['port']}".
+                    """.strip()
+                }
+
+            elif command.startswith("\\c "):
+                new_db = command.split(" ")[1]
+                self.conn_data["database"] = new_db
+                return {"message": f"Switched to database '{new_db}'"}
+
+            elif command == "\\l":
+                command = "SELECT datname FROM pg_database WHERE datistemplate = false;"
+
+            elif command == "\\dt":
+                command = """
+                    SELECT table_name 
+                    FROM information_schema.tables 
+                    WHERE table_schema='public';
+                """
+
+            elif command.startswith("\\d "):
+                table = command.split(" ")[1]
+                command = f"""
+                    SELECT column_name, data_type
+                    FROM information_schema.columns
+                    WHERE table_name = '{table}';
+                """
+
+            # -----------------------------------
+            # 2. Smart command parser 🚀
+            # -----------------------------------
+            command = self._parse_smart_command(command)
+
+            # -----------------------------------
+            # 3. Execute SQL
+            # -----------------------------------
             conn = psycopg2.connect(
                 host=self.conn_data["host"],
                 port=self.conn_data["port"],
                 database=self.conn_data["database"],
-                user=self.conn_data["user"],
+                user=self.conn_data["username"],
                 password=self.conn_data["password"]
             )
+
             cursor = conn.cursor()
             cursor.execute(command)
+
+            # -----------------------------------
+            # 4. Format result
+            # -----------------------------------
             if cursor.description:
                 columns = [col[0] for col in cursor.description]
                 rows = cursor.fetchall()
-                output = " | ".join(columns) + "\n"
-                output += "-" * 60 + "\n"
-                for row in rows:
-                    output += " | ".join(str(r) for r in row) + "\n"
+
+                result = {
+                    "columns": columns,
+                    "rows": rows
+                }
             else:
-                output = "Query executed successfully."
-            conn.commit()
+                conn.commit()
+                result = {
+                    "columns": [],
+                    "rows": [],
+                    "message": "Query executed successfully."
+                }
+
+            cursor.close()
             conn.close()
-            return output
+
+            return result
+
         except Exception as e:
-            return f"ERROR: {str(e)}"
+            logger.error(f"Postgres execution failed: {str(e)}", exc_info=True)
+            return {"error": str(e)}
+        
     
     def get_tables(self):
         if self.db_type == "postgresql":
             return self._postgres_tables()
         return []
+    
+    def _parse_smart_command(self, command):
+        cmd = command.lower().strip()
+
+        # -----------------------------------
+        # Tables
+        # -----------------------------------
+        if cmd == "tables":
+            return """
+                SELECT table_name 
+                FROM information_schema.tables 
+                WHERE table_schema='public';
+            """
+
+        # -----------------------------------
+        # Describe table
+        # -----------------------------------
+        elif cmd.startswith("describe "):
+            table = cmd.split(" ")[1]
+            return f"""
+                SELECT column_name, data_type
+                FROM information_schema.columns
+                WHERE table_name = '{table}';
+            """
+
+        # -----------------------------------
+        # Count rows
+        # -----------------------------------
+        elif cmd.startswith("count "):
+            table = cmd.split(" ")[1]
+            return f"SELECT COUNT(*) FROM {table};"
+
+        # -----------------------------------
+        # Top rows
+        # -----------------------------------
+        elif cmd.startswith("top "):
+            parts = cmd.split(" ")
+            if len(parts) >= 3:
+                limit = parts[1]
+                table = parts[2]
+                return f"SELECT * FROM {table} LIMIT {limit};"
+
+        # -----------------------------------
+        # Default → return as SQL
+        # -----------------------------------
+        return command
         
     def _mongo(self, command):
         try:
@@ -111,14 +217,14 @@ class VirtualTerminal:
         except Exception as e:
             return f"ERROR: {str(e)}"
         
-    def get_connection(db_type, index):
-        data = load_connections()
-        if db_type not in data:
-            raise ValueError("Invalid database type")
-        index = int(index)
-        if index < 0 or index >= len(data[db_type]):
-            raise ValueError("Invalid index")
-        return data[db_type][index]
+    # def get_connection(db_type, index):
+    #     data = load_connections()
+    #     if db_type not in data:
+    #         raise ValueError("Invalid database type")
+    #     index = int(index)
+    #     if index < 0 or index >= len(data[db_type]):
+    #         raise ValueError("Invalid index")
+    #     return data[db_type][index]
     
     def _postgres_tables(self):
         try:
@@ -126,10 +232,9 @@ class VirtualTerminal:
                 host=self.conn_data["host"],
                 port=self.conn_data["port"],
                 database=self.conn_data["database"],
-                user=self.conn_data["user"],
+                user=self.conn_data["username"],
                 password=self.conn_data["password"]
             )
-
             cursor = conn.cursor()
             cursor.execute("""
                 SELECT table_name 
@@ -141,6 +246,7 @@ class VirtualTerminal:
             conn.close()
             return tables
 
-        except Exception:
+        except Exception as e:
+            logger.error(f"Failed to fetch tables: {str(e)}", exc_info=True)
             return []
     

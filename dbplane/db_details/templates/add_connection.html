@@ -7,106 +7,271 @@
 <div class="mongo-add-con">
    <div class="header-group">
    <button type="button" class="back-link-btn" onclick="location.href='{% url 'db_list' db_type %}'">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="30" height="30">
-        <path fill="currentColor" d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm120-160L360-480l240-160v320Z"/>
-    </svg>
-</button>
-           <h2>Add {{ db_type|title }} Connection</h2>
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="30" height="30">
+         <path fill="currentColor" d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm120-160L360-480l240-160v320Z"/>
+     </svg>
+ </button>
+            <h2>Add {{ db_type|title }} Connection</h2>
    </div>
 
-    <form method="POST" 
-    action="{% if edit_mode %}
-                {% url 'edit_connection' db_type index %}
-              {% else %}
-                {% url 'add_connection_url' db_type %}
-              {% endif %}"
-    class="mongoconnect">
-        {% csrf_token %}
+     <form method="POST" 
+     action="{% if edit_mode %}
+                 {% url 'edit_connection' db_type index %}
+               {% else %}
+                 {% url 'add_connection_url' db_type %}
+               {% endif %}"
+     class="mongoconnect">
+         {% csrf_token %}
 
-        <label>Display Name</label>
-        <input
-            type="text"
-            name="display_name"
-            placeholder="eg: My {{ db_type|title }}"
-            value="{{ form_data.display_name|default:'' }}"
-            class="{% if errors.display_name %}input-error{% endif %}"
-        >
-        {% if errors.display_name %}
-          <div class="field-error">{{ errors.display_name }}</div>
-        {% endif %}
+         <label>Display Name</label>
+         <input
+             type="text"
+             name="display_name"
+             placeholder="eg: My {{ db_type|title }}"
+             value="{{ form_data.display_name|default:'' }}"
+             class="{% if errors.display_name %}input-error{% endif %}"
+         >
+         {% if errors.display_name %}
+           <div class="field-error">{{ errors.display_name }}</div>
+         {% endif %}
 
-        {% if db_type == 'mongo' %}
-            <label>Connection URI</label>
-            <textarea
-                name="connection"
-                rows="3"
-                placeholder="mongodb://localhost:27017"
-                class="{% if errors.uri %}input-error{% endif %}"
-            >{{ form_data.uri|default:'' }}</textarea>
+          {% if db_type == 'mongo' %}
+             <style>
+             .switch {
+               display: inline-block;
+               position: relative;
+               width: 40px;
+               height: 20px;
+               margin-bottom: 0;
+               cursor: pointer;
+             }
+             .switch input {
+               opacity: 0;
+               width: 0;
+               height: 0;
+             }
+             .slider {
+               position: absolute;
+               cursor: pointer;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: transparent;
+               transition: .3s;
+               border-radius: 20px;
+               border: 1px solid #4a5568;
+             }
+             .slider:before {
+               position: absolute;
+               content: "";
+               height: 12px;
+               width: 12px;
+               left: 3px;
+               bottom: 3px;
+               background-color: #718096;
+               transition: .3s;
+               border-radius: 50%;
+             }
+             .switch input:checked + .slider {
+               background-color: #3182ce;
+               border-color: #4299e1;
+             }
+             .switch input:checked + .slider:before {
+               transform: translateX(20px);
+               background-color: #ffffff;
+             }
+             </style>
+             <script>
+             function toggleMongoURI(checkbox) {
+                 const textarea = document.getElementById('mongo-uri-input');
+                 const hiddenInput = document.getElementById('mongo-uri-hidden');
+                 const toggleLabel = checkbox.closest('label');
+                 if (checkbox.checked) {
+                     textarea.value = hiddenInput.value;
+                     textarea.removeAttribute('readonly');
+                     toggleLabel.setAttribute('title', 'Hide Mongo String');
+                 } else {
+                     hiddenInput.value = textarea.value;
+                     textarea.value = "•".repeat(hiddenInput.value.length);
+                     textarea.setAttribute('readonly', 'true');
+                     toggleLabel.setAttribute('title', 'Show Mongo String');
+                 }
+             }
 
-            {% if errors.uri %}
-                <div class="field-error">{{ errors.uri }}</div>
-            {% endif %}
+             document.addEventListener("DOMContentLoaded", function() {
+                 const hiddenInput = document.getElementById('mongo-uri-hidden');
+                 const textarea = document.getElementById('mongo-uri-input');
+                 const checkbox = document.getElementById('mongo-toggle');
+                 if (hiddenInput && textarea) {
+                     const val = hiddenInput.value;
+                     if (val) {
+                         textarea.value = "•".repeat(val.length);
+                         textarea.setAttribute('readonly', 'true');
+                         if (checkbox) {
+                             checkbox.checked = false;
+                             const toggleLabel = checkbox.closest('label');
+                             if (toggleLabel) toggleLabel.setAttribute('title', 'Show Mongo String');
+                         }
+                     } else {
+                         textarea.value = "";
+                         textarea.removeAttribute('readonly');
+                         if (checkbox) {
+                             checkbox.checked = true;
+                             const toggleLabel = checkbox.closest('label');
+                             if (toggleLabel) toggleLabel.setAttribute('title', 'Hide Mongo String');
+                         }
+                     }
+                     
+                     textarea.addEventListener('input', function() {
+                         if (checkbox && checkbox.checked) {
+                             hiddenInput.value = textarea.value;
+                         }
+                     });
+                 }
+             });
+             </script>
 
-        {% elif db_type == 'postgresql' %}
-            <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
-            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                 <label style="margin: 0; font-weight: 500; font-size: 0.95rem;">Connection URI</label>
+                 <label class="switch" title="Show Mongo String">
+                     <input type="checkbox" id="mongo-toggle" onchange="toggleMongoURI(this)">
+                     <span class="slider"></span>
+                 </label>
+             </div>
+             <input type="hidden" name="connection" id="mongo-uri-hidden" value="{{ form_data.uri|default:'' }}">
+             <textarea
+                 id="mongo-uri-input"
+                 rows="4"
+                 placeholder="mongodb://localhost:27017"
+                 class="{% if errors.uri %}input-error{% endif %}"
+             ></textarea>
 
-            <label>Port</label>
-            <input type="number" name="port" placeholder="5432" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
-            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+             {% if errors.uri %}
+                 <div class="field-error">{{ errors.uri }}</div>
+             {% endif %}
 
-            <label>Database Name</label>
-            <input type="text" name="dbname" placeholder="postgres" value="{{ form_data.database|default:'' }}" class="{% if errors.database %}input-error{% endif %}">
-            {% if errors.database %}<div class="field-error">{{ errors.database }}</div>{% endif %}
+         {% elif db_type == 'postgresql' %}
+             <label>Host</label>
+             <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+             {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
 
-            <label>Password</label>
-            {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
-            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
+             <label>Port</label>
+             <input type="number" name="port" placeholder="5432" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+             {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
 
-        {% elif db_type == 'redis' %}
-            <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
-            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+             <label>Database Name</label>
+             <input type="text" name="dbname" placeholder="postgres" value="{{ form_data.database|default:'' }}" class="{% if errors.database %}input-error{% endif %}">
+             {% if errors.database %}<div class="field-error">{{ errors.database }}</div>{% endif %}
 
-            <label>Port</label>
-            <input type="number" name="port" placeholder="6379" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
-            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+             <label>Username</label>
+             <input type="text" name="username" placeholder="username" value="{{ form_data.username|default:'' }}" class="{% if errors.username %}input-error{% endif %}">
+             {% if errors.username %}<div class="field-error">{{ errors.username }}</div>{% endif %}
 
-            <label>Password</label>
-            {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
-            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
+             <label>Password</label>
+             {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" value=form_data.password %}
+             {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
 
-        {% elif db_type == 'rabbitmq' %}
-            <label>Host</label>
-            <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
-            {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
+         {% elif db_type == 'redis' %}
+             <label>Host</label>
+             <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+             {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
 
-            <label>Port</label>
-            <input type="number" name="port" placeholder="15672" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
-            {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
+             <label>Port</label>
+             <input type="number" name="port" placeholder="6379" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+             {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
 
-            <label>Password</label>
-            {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" %}
-            {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
-        {% endif %}
+             <label>Password</label>
+             {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" value=form_data.password %}
+             {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
 
-        <div class="button-group">
-            <button type="button" class="primary secondary-btn"
-                    onclick="location.href='{% url 'db_list' db_type %}'">
-                Cancel
-            </button>
+         {% elif db_type == 'rabbitmq' %}
+             <label>Host</label>
+             <input type="text" name="host" placeholder="127.0.0.1" value="{{ form_data.host|default:'' }}" class="{% if errors.host %}input-error{% endif %}">
+             {% if errors.host %}<div class="field-error">{{ errors.host }}</div>{% endif %}
 
-            <!-- Test and Save buttons -->
-            <button type="submit" name="action" value="test" class="primary secondary-btn">
-                Test Connection
-            </button>
-            <button type="submit" name="action" value="save" class="primary">
-                Save Connection
-            </button>
-        </div>
-    </form>
-</div>
+             <label>Port</label>
+             <input type="number" name="port" placeholder="15672" value="{{ form_data.port|default:'' }}" class="{% if errors.port %}input-error{% endif %}">
+             {% if errors.port %}<div class="field-error">{{ errors.port }}</div>{% endif %}
 
-{% endblock %}
+             <label>Password</label>
+             {% include "input_password_field.html" with id="user_pass" name="password" placeholder="" value=form_data.password %}
+             {% if errors.password %}<div class="field-error">{{ errors.password }}</div>{% endif %}
+         {% endif %}
+
+         <div class="button-group">
+             <button type="button" class="primary secondary-btn"
+                     onclick="location.href='{% url 'db_list' db_type %}'">
+                 Cancel
+             </button>
+
+             <!-- Test and Save buttons -->
+             <button type="button" id="test-conn-btn" class="primary secondary-btn" onclick="testConnectionAjax()">
+                 Test Connection
+             </button>
+             <button type="submit" name="action" value="save" class="primary">
+                 Save Connection
+             </button>
+         </div>
+
+         <script>
+         function showToast(message, type = 'success') {
+             const container = document.getElementById('toast-container');
+             if (!container) return;
+
+             const toast = document.createElement('div');
+             toast.className = `toast toast-${type}`;
+             toast.textContent = message;
+
+             container.appendChild(toast);
+
+             setTimeout(() => {
+                 toast.remove();
+             }, 3500);
+         }
+
+         async function testConnectionAjax() {
+             const form = document.querySelector('.mongoconnect');
+             const formData = new FormData(form);
+             
+             const data = {};
+             formData.forEach((value, key) => {
+                 data[key] = value;
+             });
+
+             const dbType = "{{ db_type }}";
+             const url = `/db/${dbType}/test-api/`;
+             
+             const testBtn = document.getElementById('test-conn-btn');
+             const originalText = testBtn.textContent;
+             testBtn.textContent = "Testing...";
+             testBtn.disabled = true;
+             
+             try {
+                 const response = await fetch(url, {
+                     method: 'POST',
+                     headers: {
+                         'Content-Type': 'application/json',
+                         'X-CSRFToken': getCSRFToken()
+                     },
+                     body: JSON.stringify(data)
+                 });
+                 
+                 const result = await response.json();
+                  if (result.success) {
+                      showToast(result.message, "success");
+                  } else {
+                      showToast(result.error, "error");
+                  }
+              } catch (err) {
+                  showToast("Request failed: " + err, "error");
+             } finally {
+                 testBtn.textContent = originalText;
+                 testBtn.disabled = false;
+             }
+         }
+         </script>
+     </form>
+ </div>
+
+ {% endblock %}

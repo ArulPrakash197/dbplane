@@ -31,9 +31,19 @@ window.togglePassword = function (el) {
   if (input.type === "password") {
     input.type = "text";
     svg.innerHTML = iconClosed;
+    if (el.title === "Show Mongo String") {
+      el.title = "Hide Mongo String";
+    } else if (el.title === "Show password") {
+      el.title = "Hide password";
+    }
   } else {
     input.type = "password";
     svg.innerHTML = iconOpen;
+    if (el.title === "Hide Mongo String") {
+      el.title = "Show Mongo String";
+    } else if (el.title === "Hide password") {
+      el.title = "Show password";
+    }
   }
 };
 
@@ -112,12 +122,12 @@ async function openTerminal(dbType, index) {
   }
 }
 
-
 // --------------------------------------------------
 // TERMINAL LOGIC
 // --------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
 
+  let lastQueryResult = null;
   const wrapper = document.getElementById("db-terminal-wrapper");
   if (!wrapper) return; // Only run on terminal page
 
@@ -132,9 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const promptText = dbType + "=#";
   promptSpan.textContent = promptText;
 
-  let commandHistory = [];
-  let historyIndex = -1;
+  // Persistent History
+  let commandHistory = JSON.parse(localStorage.getItem("dbTerminalHistory")) || [];
+  let historyIndex = commandHistory.length;
   let cachedTables = [];
+
+  function saveHistory() {
+    localStorage.setItem("dbTerminalHistory", JSON.stringify(commandHistory));
+  }
 
   commandInput.focus();
 
@@ -144,13 +159,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Preload tables once (for autocomplete)
   preloadTables();
 
-  commandInput.addEventListener("keydown", function (e) {
+  // Auto-expand textarea
+  commandInput.addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+  });
 
+  commandInput.addEventListener("keydown", function (e) {
+    // Execute on Enter (Shift+Enter = new line)
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       executeCommand();
     }
-
+    // History Up
     if (e.key === "ArrowUp") {
       if (historyIndex > 0) {
         historyIndex--;
@@ -158,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       e.preventDefault();
     }
-
+    // History Down
     if (e.key === "ArrowDown") {
       if (historyIndex < commandHistory.length - 1) {
         historyIndex++;
@@ -169,16 +190,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       e.preventDefault();
     }
-
+    // Autocomplete
     if (e.key === "Tab") {
       e.preventDefault();
       handleAutocomplete();
     }
   });
 
-
   // --------------------------------------------------
-  // PRELOAD TABLES (ONLY ONCE)
+  // PRELOAD TABLES
   // --------------------------------------------------
   async function preloadTables() {
     const response = await fetch("/db/terminal/autocomplete/", {
@@ -232,8 +252,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     commandHistory.push(cmd);
     historyIndex = commandHistory.length;
+    saveHistory();
 
-    appendOutput(promptText + " " + cmd);
+    appendOutput(`%c${promptText}`, cmd);
 
     if (cmd === "\\clear") {
       outputDiv.innerHTML = "";
@@ -244,6 +265,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cmd === "\\q") {
       appendOutput("Session terminated.");
       commandInput.disabled = true;
+      return;
+    }
+
+    if (!cmd.endsWith(";") && !cmd.startsWith("\\")) {
+      appendOutput("⚠️ Query should end with semicolon ;");
       return;
     }
 
@@ -265,23 +291,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const data = await response.json();
     loadingDiv.style.display = "none";
+    const endTime = performance.now();
+    const duration = ((endTime - startTime) / 1000).toFixed(3);
 
-    if (typeof data.output === "object") {
-      appendTable(data.output);
-    } else {
-      appendOutput(data.output);
+    if (data.output && typeof data.output === "object") {
+    // 🔴 Backend returned error
+    if (data.output.error) {
+      appendOutput("ERROR: " + data.output.error);
     }
+    // 🟢 Select query result
+    else if (data.output.columns && data.output.rows) {
+      lastQueryResult = data.output;
+      appendTable(data.output);
+      // Show row count
+      if (data.output.rows.length > 0) {
+        appendOutput(`(${data.output.rows.length} rows)`);
+      }
+    }
+    // 🟡 Non-select success
+    else if (data.output.message) {
+      appendOutput(data.output.message);
+    }
+  } else {
+    appendOutput(data.output);
+  }
   }
 
 
   // --------------------------------------------------
   // OUTPUT HELPERS
   // --------------------------------------------------
-  function appendOutput(text) {
+  function appendOutput(text, command = null) {
     const line = document.createElement("div");
-    line.textContent = text;
+    if (command !== null) {
+      line.innerHTML =
+        `<span style="color:#00ff00">${text}</span> ${highlightSQL(command)}`;
+    } else {
+      line.innerHTML = highlightSQL(text);
+    }
+
     outputDiv.appendChild(line);
     outputDiv.scrollTop = outputDiv.scrollHeight;
+  }
+
+  function highlightSQL(text) {
+    const keywords = [
+      "SELECT","INSERT","UPDATE","DELETE",
+      "CREATE","DROP","FROM","WHERE",
+      "TABLE","VALUES","INTO","SET",
+      "ALTER","JOIN","LEFT","RIGHT",
+      "INNER","OUTER","GROUP","BY","ORDER"
+    ];
+
+    let result = text;
+
+    keywords.forEach(word => {
+      const regex = new RegExp("\\b" + word + "\\b", "gi");
+      result = result.replace(regex,
+        `<span style="color:#00ffff;font-weight:bold">${word}</span>`
+      );
+    });
+
+    return result;
   }
 
   function appendTable(result) {
@@ -290,16 +361,46 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let table = document.createElement("pre");
+    const columns = result.columns
+    const rows = result.rows
 
-    let colLine = result.columns.join(" | ");
-    let separator = "-".repeat(colLine.length);
-    let rows = result.rows.map(row => row.join(" | ")).join("\n");
+    const colWidths = columns.map((col, i) => {
+    let max = col.length;
+    rows.forEach(row => {
+      max = Math.max(max, String(row[i]).length);
+    });
+    return max;
+    });
 
-    table.textContent = colLine + "\n" + separator + "\n" + rows;
+    function formatRow(row) {
+      return row.map((cell, i) =>
+        String(cell).padEnd(colWidths[i])
+      ).join(" | ");
+    }
 
-    outputDiv.appendChild(table);
+    const header = formatRow(columns);
+    const separator = colWidths.map(w => "-".repeat(w)).join("-+-");
+    const body = rows.map(row => formatRow(row)).join("\n");
+
+    const tableBlock = document.createElement("pre");
+    tableBlock.textContent = header + "\n" + separator + "\n" + body;
+
+    outputDiv.appendChild(tableBlock);
     outputDiv.scrollTop = outputDiv.scrollHeight;
   }
-
 });
+
+window.showToast = function (message, type = 'success') {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.textContent = message;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 3500);
+};

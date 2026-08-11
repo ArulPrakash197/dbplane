@@ -1,13 +1,18 @@
 # Python
 __pycache__/
-*.pyc
+**/__pycache__/
+*.py[cod]
+*$py.class
 
 # VS Code
 .vscode/
 
 # logs
 logs/
+**/logs/
 *.log
 
-#connections.json
+# local runtime data
 connections.json
+db.sqlite3
+.dbplane_credential.key
