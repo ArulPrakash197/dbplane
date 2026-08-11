@@ -22,5 +22,6 @@ def test_postgres(payload):
         port=payload["port"],
         database=payload["database"],
         password=payload["password"],
+        user=payload["username"],
         connect_timeout=10
     )

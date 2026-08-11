@@ -9,5 +9,7 @@ __pycache__/
 logs/
 *.log
 
-#connections.json
+# local runtime data
 connections.json
+db.sqlite3
+.dbplane_credential.key

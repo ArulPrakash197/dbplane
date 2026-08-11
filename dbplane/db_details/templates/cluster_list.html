@@ -1,0 +1,706 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<style>
+/* Results Slide Panel */
+.results-slide-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    max-width: 100vw;
+    min-width: min(720px, 100vw);
+    height: 100vh;
+    background: #1a202c;
+    border-left: 2px solid #2d3748;
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+}
+.results-slide-panel.open {
+    transform: translateX(0);
+}
+.results-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.results-panel-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.results-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 25px;
+    background: #2d3748;
+    border-bottom: 1px solid #4a5568;
+    flex-shrink: 0;
+}
+.results-panel-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.results-panel-close {
+    background: none;
+    border: 1px solid #4a5568;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+}
+.results-panel-close:hover {
+    background: #e74c3c;
+    border-color: #e74c3c;
+}
+.results-panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 25px;
+}
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 0.9rem;
+    background: #2d3748;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #4a5568;
+}
+.results-table thead tr {
+    background: #4a5568;
+}
+.results-table th, .results-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #4a5568;
+}
+.results-table th {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.results-table tbody tr {
+    cursor: default;
+    transition: background 0.15s;
+}
+.results-table tbody tr:hover {
+    background: #374151;
+}
+.job-name-button {
+    all: unset;
+    color: #63b3ed;
+    cursor: pointer;
+    font-weight: 700;
+}
+.job-name-button:hover {
+    background: transparent !important;
+    color: #90cdf4;
+    text-decoration: underline;
+}
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+.status-badge.running {
+    background: rgba(246, 173, 85, 0.2);
+    color: #f6ad55;
+}
+.status-badge.completed {
+    background: rgba(72, 187, 120, 0.2);
+    color: #48bb78;
+}
+.status-badge.failed {
+    background: rgba(252, 129, 129, 0.2);
+    color: #fc8181;
+}
+.job-detail-pane {
+    margin-top: 15px;
+    background: #111;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.job-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: #2d3748;
+    border-bottom: 1px solid #4a5568;
+}
+.job-detail-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.job-log-console {
+    padding: 15px;
+    color: #32cd32;
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    white-space: pre-wrap;
+    max-height: 350px;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+.job-status-table-container {
+    padding: 15px;
+    border-top: 1px solid #2d3748;
+}
+.no-results-msg {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    font-size: 1rem;
+}
+.no-results-msg svg {
+    display: block;
+    margin: 0 auto 15px;
+    color: #4a5568;
+}
+@media (max-width: 900px) {
+    .results-slide-panel {
+        width: 100vw;
+        min-width: 0;
+    }
+}
+</style>
+
+<div class="page-content">
+
+  <div class="header-section">
+    <div class="header-group">
+        <button type="button" class="back-link-btn" onclick="location.href='{% url 'cluster_configuration'%}'">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="30" height="30">
+        <path fill="currentColor" d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm120-160L360-480l240-160v320Z"/>
+    </svg>
+        </button>
+        <h2 class="page-title">{{ db_type|title }} Cluster Configurations</h2>
+    </div>
+
+    <button type="button" class="btn-connect-plus" onclick="location.href='{% url 'add_cluster' db_type %}'">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24">
+            <path fill="currentColor" d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+        </svg>
+        Add {{ db_type|title }} Cluster Configuration
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="col-sno">S.No</th>
+          <th class="col-dbname">Cluster Name</th>
+          <th class="col-actions">Operations</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for con in connections %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td class="db-identifier">
+            {{ con.display_name|default:"--" }}
+          </td>
+          <td>
+            <div class="actions-wrapper">
+              <button type="button" class="action-btn edit" data-tooltip="Edit" onclick="location.href='{% url 'edit_cluster' db_type forloop.counter0 %}'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25" height="25">
+                  <path fill="currentColor" d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
+                </svg>
+              </button>
+
+              <button type="button" class="action-btn deploy" data-tooltip="Deploy" onclick="openDeployInputsModal({{ forloop.counter0 }})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                    <circle cx="9" cy="10" r="2.5"/>
+                    <path d="M9 7.5v0M9 12.5v0"/>
+                    <path d="M6.5 10h0M11.5 10h0"/>
+                    <polyline points="8 9.2 9 10.2 10.5 8.5"/>
+                    <line x1="15" y1="8" x2="19" y2="8"/>
+                    <circle cx="16.5" cy="8" r="0.8" fill="currentColor"/>
+                    <line x1="15" y1="10.5" x2="19" y2="10.5"/>
+                    <circle cx="17.5" cy="10.5" r="0.8" fill="currentColor"/>
+                    <line x1="15" y1="13" x2="19" y2="13"/>
+                    <circle cx="16" cy="13" r="0.8" fill="currentColor"/>
+                </svg>
+              </button>
+
+              <button type="button" class="action-btn result" data-tooltip="Results" onclick="openResultsPanel({{ forloop.counter0 }}, '{{ con.display_name|default:"--"|escapejs }}')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                      <rect x="9" y="3" width="6" height="4" rx="1"/>
+                      <path d="M9 12l2 2 4-4"/>
+                      <line x1="9" y1="17" x2="15" y2="17"/>
+                  </svg>
+              </button>
+
+              <button type="button" class="action-btn delete" data-tooltip="Delete" onclick="openDeleteModal('{% url 'delete_cluster' db_type forloop.counter0 %}')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25" height="25">
+                  <path fill="currentColor" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+
+        {% empty %}
+        <tr>
+          <td colspan="3" style="text-align:center;">
+            No {{ db_type }} cluster configurations found.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<form method="post" id="deleteForm">
+  {% csrf_token %}
+
+  <div id="modalOverlay" class="overlay"></div>
+
+  <div id="deleteModal" class="modal">
+    <h3>Are you sure?</h3>
+    <p>This action cannot be undone.</p>
+
+    <div class="modal-buttons">
+      <button type="button" onclick="closeModal()">Cancel</button>
+      <button type="submit" class="danger">Delete</button>
+    </div>
+  </div>
+</form>
+
+<!-- Deploy Inputs Modal -->
+<div id="deploy-inputs-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(4px);">
+    <div class="modal-content" style="background: #1c2430; color: #fff; padding: 25px; border-radius: 8px; width: 500px; max-width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #2d3748;">
+        <h3 style="margin-top: 0; font-size: 1.3rem; border-bottom: 1px solid #2d3748; padding-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; color: #3182ce;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Deployment Parameters
+        </h3>
+        <div style="margin-top: 20px; font-size: 0.95rem; line-height: 1.6; display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label style="font-weight: bold;">Replica Set Name *</label>
+                <input type="text" id="deploy_replset_name" value="INFRAON" style="width: 100%; padding: 8px 10px; background: #2d3748; color: #fff; border: 1px solid #4a5568; border-radius: 4px; box-sizing: border-box;" required>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label style="font-weight: bold;">logicalSessionRefreshMillis *</label>
+                <input type="number" id="deploy_logical_session" value="60000" style="width: 100%; padding: 8px 10px; background: #2d3748; color: #fff; border: 1px solid #4a5568; border-radius: 4px; box-sizing: border-box;" required>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label style="font-weight: bold;">maxSessions *</label>
+                <input type="number" id="deploy_max_sessions" value="5000000" style="width: 100%; padding: 8px 10px; background: #2d3748; color: #fff; border: 1px solid #4a5568; border-radius: 4px; box-sizing: border-box;" required>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label style="font-weight: bold;">allowMultipleArbiters *</label>
+                <select id="deploy_multiple_arbiters" style="width: 100%; padding: 8px 10px; background: #2d3748; color: #fff; border: 1px solid #4a5568; border-radius: 4px; box-sizing: border-box;">
+                    <option value="true" selected>true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; border-top: 1px solid #2d3748; padding-top: 15px;">
+            <button type="button" onclick="closeDeployInputsModal()" style="min-width: 80px; padding: 8px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; border: 1px solid #4a5568; background: transparent; color: #fff;">Cancel</button>
+            <button type="button" onclick="startDeployment()" style="min-width: 100px; padding: 8px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; border: none; background: #3182ce; color: #fff;">Confirm Deploy</button>
+        </div>
+    </div>
+</div>
+
+<!-- Deploy Logs & Progress Modal -->
+<div id="deploy-logs-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1001; justify-content: center; align-items: center; backdrop-filter: blur(4px);">
+    <div class="modal-content" style="background: #1a202c; color: #fff; padding: 25px; border-radius: 8px; width: 700px; max-width: 95%; max-height: 85vh; overflow-y: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #2d3748;">
+        <h3 style="margin-top: 0; font-size: 1.3rem; border-bottom: 1px solid #2d3748; padding-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; color: #3182ce;"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5 2.31 0 4.24-1 5.5-2.5"/><path d="m12.5 7.5-6 6c-.83.83-.83 2.17 0 3a2.12 2.12 0 0 0 3 0l6-6"/><path d="m14 3 3.5 3.5"/><path d="M18.5 5.5c1.5-1.5 3.5-3.5 3.5-3.5s-2 2-3.5 3.5c-.83.83-.83 2.17 0 3a2.12 2.12 0 0 0 3 0Z"/></svg> Deployment Status & Logs
+        </h3>
+        <div id="deploy-status-header" style="font-weight: bold; color: #e67e22; margin-top: 15px;">
+            Deploying cluster, configuring /etc/mongod.conf and initiating replica set...
+        </div>
+        
+        <div id="deploy-logs-console" style="margin-top: 15px; background: #111; color: #32cd32; font-family: monospace; font-size: 0.85rem; padding: 15px; border-radius: 6px; height: 250px; overflow-y: auto; white-space: pre-wrap; border: 1px solid #2d3748;">
+            Logs will appear here...
+        </div>
+        
+        <div id="deploy-replication-dashboard" style="margin-top: 20px; display: none;">
+            <h4 style="margin: 0 0 10px 0;">Replica Set Status & Lag Overview</h4>
+            <div id="deploy-replication-table-container"></div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; margin-top: 25px; border-top: 1px solid #2d3748; padding-top: 15px;">
+            <button type="button" id="deploy-logs-close-btn" onclick="closeDeployLogsModal()" style="min-width: 80px; padding: 8px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; border: none; background: #3182ce; color: #fff;">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Results Panel Overlay -->
+<div id="results-panel-overlay" class="results-panel-overlay" onclick="closeResultsPanel()"></div>
+
+<!-- Results Slide Panel -->
+<div id="results-slide-panel" class="results-slide-panel">
+    <div class="results-panel-header">
+        <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            <span id="results-panel-title">Deployment Results</span>
+        </h3>
+        <button class="results-panel-close" onclick="closeResultsPanel()">&times;</button>
+    </div>
+    <div class="results-panel-body" id="results-panel-body">
+        <div class="no-results-msg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+            Loading...
+        </div>
+    </div>
+</div>
+
+<script>
+  let activeClusterIndex = null;
+  let activeResultsIndex = null;
+  let liveEventSource = null;
+
+  function openResultsPanel(index, clusterName) {
+      activeResultsIndex = index;
+      document.getElementById('results-panel-title').textContent = clusterName + ' - Deployment Results';
+      document.getElementById('results-panel-body').innerHTML = '<div class="no-results-msg">Loading...</div>';
+      document.getElementById('results-slide-panel').classList.add('open');
+      document.getElementById('results-panel-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      fetchResults(index);
+  }
+
+  function closeResultsPanel() {
+      document.getElementById('results-slide-panel').classList.remove('open');
+      document.getElementById('results-panel-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+      if (liveEventSource) {
+          liveEventSource.close();
+          liveEventSource = null;
+      }
+  }
+
+  async function fetchResults(index) {
+      const dbType = "{{ db_type }}";
+      try {
+          const response = await fetch(`/cluster-configuration/db/${dbType}/results-api/${index}/`);
+          const data = await response.json();
+          if (data.success) {
+              renderResults(data.results, index);
+          } else {
+              document.getElementById('results-panel-body').innerHTML = '<div class="no-results-msg">Error loading results.</div>';
+          }
+      } catch (err) {
+          document.getElementById('results-panel-body').innerHTML = '<div class="no-results-msg">Failed to fetch results.</div>';
+      }
+  }
+
+  function escapeHtml(value) {
+      const text = value === null || value === undefined ? '' : String(value);
+      return text.replace(/[&<>"']/g, function(char) {
+          return {
+              '&': '&amp;',
+              '<': '&lt;',
+              '>': '&gt;',
+              '"': '&quot;',
+              "'": '&#39;'
+          }[char];
+      });
+  }
+
+  function normalizeStatus(status) {
+      const value = String(status || '').toLowerCase();
+      return ['running', 'completed', 'failed'].includes(value) ? value : 'running';
+  }
+
+  function renderResults(results, index) {
+      const body = document.getElementById('results-panel-body');
+      
+      if (!results || results.length === 0) {
+          body.innerHTML = `
+              <div class="no-results-msg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+                  No configuration deployments done yet
+              </div>
+          `;
+          return;
+      }
+      
+      let html = `
+          <table class="results-table">
+              <thead>
+                  <tr>
+                      <th>Job Name</th>
+                      <th>Status</th>
+                      <th>Parameters</th>
+                      <th>Started At</th>
+                      <th>Completed At</th>
+                  </tr>
+              </thead>
+              <tbody>
+      `;
+      
+      results.forEach(r => {
+          const jobId = Number(r.id);
+          const clusterIndex = Number(index);
+          const statusClass = normalizeStatus(r.status);
+          const statusIcon = statusClass === 'completed' ? '&#10003;' : (statusClass === 'failed' ? '&#10005;' : '&#8635;');
+          const statusLabel = escapeHtml(statusClass);
+          const params = r.deploy_parameters || {};
+          const paramStr = 'RS: ' + escapeHtml(params.replicaset_name || 'N/A');
+          const jobName = escapeHtml(r.job_name || 'DeployJob');
+          const startedAt = escapeHtml(r.started_at || '');
+          const completedAt = escapeHtml(r.completed_at || '');
+          const logOutput = escapeHtml(r.log_output || 'No logs available.');
+          const resultHtml = r.result_html ? '<div class="job-status-table-container">' + r.result_html + '</div>' : '';
+          
+          html += `
+              <tr id="job-row-${jobId}">
+                  <td><button type="button" class="job-name-button" onclick="toggleJobDetail(${jobId}, ${clusterIndex}, '${statusClass}')">${jobName}</button></td>
+                  <td><span class="status-badge ${statusClass}">${statusIcon} ${statusLabel}</span></td>
+                  <td style="font-size: 0.82rem; color: #a0aec0;">${paramStr}</td>
+                  <td>${startedAt}</td>
+                  <td>${completedAt}</td>
+              </tr>
+              <tr id="job-detail-${jobId}" style="display: none;">
+                  <td colspan="5" style="padding: 0; border: none;">
+                      <div class="job-detail-pane">
+                          <div class="job-detail-header">
+                              <h4>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                                  ${jobName} - Deployment Logs
+                              </h4>
+                              <span class="status-badge ${statusClass}">${statusIcon} ${statusLabel}</span>
+                          </div>
+                          <div class="job-log-console" id="job-log-${jobId}">${logOutput}</div>
+                          ${resultHtml}
+                      </div>
+                  </td>
+              </tr>
+          `;
+      });
+      
+      html += '</tbody></table>';
+      body.innerHTML = html;
+  }
+
+  function toggleJobDetail(jobId, clusterIndex, status) {
+      const detailRow = document.getElementById('job-detail-' + jobId);
+      if (!detailRow) return;
+      
+      if (detailRow.style.display === 'none') {
+          detailRow.style.display = 'table-row';
+          
+          // If job is still running, start live stream
+          if (status === 'running') {
+              startLiveLogStream(jobId, clusterIndex);
+          }
+      } else {
+          detailRow.style.display = 'none';
+          if (liveEventSource) {
+              liveEventSource.close();
+              liveEventSource = null;
+          }
+      }
+  }
+
+  function startLiveLogStream(jobId, clusterIndex) {
+      if (liveEventSource) {
+          liveEventSource.close();
+      }
+      
+      const dbType = "{{ db_type }}";
+      const logConsole = document.getElementById('job-log-' + jobId);
+      logConsole.textContent = '';
+      
+      liveEventSource = new EventSource(`/cluster-configuration/db/${dbType}/results-api/${clusterIndex}/job/${jobId}/live/`);
+      
+      liveEventSource.onmessage = function(e) {
+          const data = JSON.parse(e.data);
+          if (data.log) {
+              logConsole.textContent += data.log + '\\n';
+              logConsole.scrollTop = logConsole.scrollHeight;
+          }
+          if (data.status_table) {
+              let container = document.querySelector('#job-detail-' + jobId + ' .job-status-table-container');
+              if (!container) {
+                  container = document.createElement('div');
+                  container.className = 'job-status-table-container';
+                  document.querySelector('#job-detail-' + jobId + ' .job-detail-pane').appendChild(container);
+              }
+              container.innerHTML = data.status_table;
+          }
+          if (data.done || data.error) {
+              liveEventSource.close();
+              liveEventSource = null;
+              // Refresh results to update status badges
+              fetchResults(clusterIndex);
+          }
+      };
+      
+      liveEventSource.onerror = function() {
+          liveEventSource.close();
+          liveEventSource = null;
+      };
+  }
+
+  function openDeleteModal(deleteUrl) {
+      document.getElementById('deleteForm').action = deleteUrl;
+      document.getElementById('deleteModal').classList.add('active');
+      document.getElementById('modalOverlay').classList.add('active');
+  }
+
+  function closeModal() {
+      document.getElementById('deleteModal').classList.remove('active');
+      document.getElementById('modalOverlay').classList.remove('active');
+  }
+
+  function openDeployInputsModal(index) {
+      activeClusterIndex = index;
+      document.getElementById('deploy-inputs-modal').style.display = 'flex';
+  }
+
+  function closeDeployInputsModal() {
+      document.getElementById('deploy-inputs-modal').style.display = 'none';
+  }
+
+  function closeDeployLogsModal() {
+      document.getElementById('deploy-logs-modal').style.display = 'none';
+  }
+
+  function getCSRFToken() {
+      return document.querySelector('[name=csrfmiddlewaretoken]').value;
+  }
+
+  async function startDeployment() {
+      const rsName = document.getElementById('deploy_replset_name').value.trim();
+      const logicalSession = document.getElementById('deploy_logical_session').value.trim();
+      const maxSessions = document.getElementById('deploy_max_sessions').value.trim();
+      const multipleArbiters = document.getElementById('deploy_multiple_arbiters').value;
+      
+      if (!rsName || !logicalSession || !maxSessions) {
+          alert("All deployment parameters are mandatory!");
+          return;
+      }
+      
+      closeDeployInputsModal();
+      
+      const logsConsole = document.getElementById('deploy-logs-console');
+      const statusHeader = document.getElementById('deploy-status-header');
+      const closeBtn = document.getElementById('deploy-logs-close-btn');
+      const dashboard = document.getElementById('deploy-replication-dashboard');
+      const tableContainer = document.getElementById('deploy-replication-table-container');
+      
+      logsConsole.textContent = "Initiating deployment parameters validation...\n";
+      statusHeader.textContent = "Deploying cluster, configuring /etc/mongod.conf and restarting services...";
+      statusHeader.style.color = "#e67e22";
+      dashboard.style.display = "none";
+      
+      document.getElementById('deploy-logs-modal').style.display = 'flex';
+      
+      const payload = {
+          'replicaset_name': rsName,
+          'logicalSessionRefreshMillis': logicalSession,
+          'maxSessions': maxSessions,
+          'allowMultipleArbiters': (multipleArbiters === 'true')
+      };
+      
+      const dbType = "{{ db_type }}";
+      const url = `/cluster-configuration/db/${dbType}/deploy-api/${activeClusterIndex}/`;
+      
+      try {
+          const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRFToken': getCSRFToken()
+              },
+              body: JSON.stringify(payload)
+          });
+          
+          const result = await response.json();
+          
+          if (!result.success) {
+              statusHeader.textContent = "Deployment Failed!";
+              statusHeader.style.color = "#e74c3c";
+              logsConsole.textContent += `\nError: ${result.error || 'Failed to save configuration'}`;
+              return;
+          }
+          
+          logsConsole.textContent += "Configuration saved. Initiating deployment stream...\n";
+          
+          const streamUrl = `/cluster-configuration/db/${dbType}/deploy-stream/${result.index}/?deployment_id=${result.deployment_id}&replicaset_name=${encodeURIComponent(rsName)}&logicalSessionRefreshMillis=${logicalSession}&maxSessions=${maxSessions}&allowMultipleArbiters=${multipleArbiters}`;
+          const eventSource = new EventSource(streamUrl);
+          
+          eventSource.onmessage = function(e) {
+              const data = JSON.parse(e.data);
+              if (data.log) {
+                  logsConsole.textContent += data.log + "\n";
+                  logsConsole.scrollTop = logsConsole.scrollHeight;
+              }
+              if (data.status_table) {
+                  tableContainer.innerHTML = data.status_table;
+                  dashboard.style.display = "block";
+              }
+              if (data.error) {
+                  statusHeader.textContent = "Deployment Failed!";
+                  statusHeader.style.color = "#e74c3c";
+                  logsConsole.textContent += `\nError: ${data.error}`;
+                  eventSource.close();
+              }
+              if (data.done) {
+                  statusHeader.textContent = "Deployment Succeeded!";
+                  statusHeader.style.color = "#2ecc71";
+                  eventSource.close();
+              }
+          };
+          
+          eventSource.onerror = function(err) {
+              logsConsole.textContent += "\n[Stream Error] Connection lost.";
+              eventSource.close();
+          };
+          
+      } catch (err) {
+          statusHeader.textContent = "Deployment Failed!";
+          statusHeader.style.color = "#e74c3c";
+          logsConsole.textContent += `\nRequest Exception: ${err}`;
+      }
+  }
+</script>
+{% endblock %}

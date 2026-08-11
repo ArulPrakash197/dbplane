@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="subtitle">
+    <p>Cluster Configuration</p>
+</div>
+
+<div class="wrapper">
+<div class="container">
+    <img src="{% static 'images/mongodb.png' %}" width="50" height="50">
+    <button class="container-button trans"><a class="con-title" href="{% url 'cluster_list' 'mongo'%}">MongoDB</a></button>
+</div>
+<div class="container">
+    <img src="{% static 'images/redis.png' %}" width="50" height="50">
+    <button class="container-button trans"> <a class="con-title" href="{% url 'cluster_list' 'redis'%}">&nbsp;&nbsp;Redis</a></button>
+</div>
+<div class="container">
+    <img src="{% static 'images/postgresql.png' %}" width="50" height="50">
+    <button class="container-button trans"><a class="con-title" href="{% url 'cluster_list' 'postgresql'%}">&nbsp;&nbsp;PostgreSQL</a></button>
+</div>
+<div class="container">
+    <img src="{% static 'images/rabbitmq.png' %}" width="50" height="50">
+    <button class="container-button trans"><a class="con-title" href="{% url 'cluster_list' 'rabbitmq'%}">&nbsp;&nbsp;RabbitMQ</a></button>
+</div>
+</div>
+{% endblock %}
