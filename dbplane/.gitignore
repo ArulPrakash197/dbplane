@@ -1,12 +1,15 @@
 # Python
 __pycache__/
-*.pyc
+**/__pycache__/
+*.py[cod]
+*$py.class
 
 # VS Code
 .vscode/
 
 # logs
 logs/
+**/logs/
 *.log
 
 # local runtime data
