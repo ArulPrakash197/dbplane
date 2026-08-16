@@ -11,6 +11,7 @@ __pycache__/
 logs/
 **/logs/
 *.log
+db_details/logs/*.log
 
 # local runtime data
 connections.json
