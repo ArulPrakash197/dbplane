@@ -1,0 +1,153 @@
+
+2026-02-24 15:32:39,268 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \c
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \c
+        ^
+
+2026-02-24 15:32:41,977 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \l
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \l
+        ^
+
+2026-02-24 15:32:45,122 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \l;
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \l;
+        ^
+
+2026-02-24 15:33:07,007 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \c infraondns_db
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \c infraondns_db
+        ^
+
+2026-02-24 15:34:11,099 | ERROR | Postgres execution failed: syntax error at or near "ufwbuebvfheqfjdchsdc"
+LINE 1: ufwbuebvfheqfjdchsdc hdcvhdvwhjevdhjwqvfjwhvjhwvdjwhevdw dhw...
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "ufwbuebvfheqfjdchsdc"
+LINE 1: ufwbuebvfheqfjdchsdc hdcvhdvwhjevdhjwqvfjwhvjhwvdjwhevdw dhw...
+        ^
+
+2026-02-24 15:35:19,260 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \l
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \l
+        ^
+
+2026-02-24 16:08:17,080 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \l
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \l
+        ^
+
+2026-02-24 16:31:00,192 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \l
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 48, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \l
+        ^
+
+2026-02-24 16:51:30,451 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \\l
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 77, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \\l
+        ^
+
+2026-02-24 16:51:32,132 | ERROR | Postgres execution failed: can't execute an empty query
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 77, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.ProgrammingError: can't execute an empty query
+2026-02-24 16:51:37,874 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \\l;
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 77, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \\l;
+        ^
+
+2026-03-09 10:15:21,433 | ERROR | Failed to fetch tables: connection to server at "10.0.4.43", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 197, in _postgres_tables
+    conn = psycopg2.connect(
+        host=self.conn_data["host"],
+    ...<3 lines>...
+        password=self.conn_data["password"]
+    )
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "10.0.4.43", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-03-16 18:38:53,505 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \c
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 104, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \c
+        ^
+
+2026-03-16 18:39:00,386 | ERROR | Postgres execution failed: syntax error at or near "\"
+LINE 1: \dt+
+        ^
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\terminal_service.py", line 104, in _postgres
+    cursor.execute(command)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.SyntaxError: syntax error at or near "\"
+LINE 1: \dt+
+        ^
+

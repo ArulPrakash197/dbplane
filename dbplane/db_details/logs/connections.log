@@ -70,3 +70,2367 @@
 2026-02-10 01:51:49,580 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
 2026-02-10 01:53:35,412 | INFO | AddConnection POST | db=mongo | action=test
 2026-02-10 01:53:35,412 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-17 15:53:17,095 | INFO | AddConnection POST | db=mongo | action=test
+2026-02-17 15:53:17,095 | WARNING | Validation failed | {'display_name': 'This field is required', 'uri': 'This field is required'}
+2026-02-17 15:54:57,742 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-17 15:54:57,743 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-17 23:08:00,004 | INFO | Connection deleted | db=postgresql | index=1
+2026-02-17 23:08:43,036 | INFO | Connection deleted | db=postgresql | index=0
+2026-02-17 23:09:16,599 | INFO | AddConnection POST | db=postgresql | action=save
+2026-02-17 23:09:16,601 | INFO | Connection saved successfully
+2026-02-17 23:18:56,176 | INFO | Loading connections
+2026-02-17 23:18:56,176 | INFO | Connections loaded successfully
+2026-02-17 23:19:16,622 | INFO | AddConnection POST | db=mongo | action=save
+2026-02-17 23:19:16,622 | INFO | Adding connection | db=mongo
+2026-02-17 23:19:16,622 | INFO | Loading connections
+2026-02-17 23:19:16,622 | INFO | Connections loaded successfully
+2026-02-17 23:19:16,623 | INFO | Saved Connections successfully
+2026-02-17 23:19:16,623 | INFO | Connection added successfully | db=mongo | name=Test1
+2026-02-17 23:19:16,623 | INFO | Connection saved successfully
+2026-02-17 23:19:16,628 | INFO | Loading connections
+2026-02-17 23:19:16,638 | INFO | Connections loaded successfully
+2026-02-17 23:19:28,608 | INFO | AddConnection POST | db=mongo | action=save
+2026-02-17 23:19:28,608 | INFO | Adding connection | db=mongo
+2026-02-17 23:19:28,608 | INFO | Loading connections
+2026-02-17 23:19:28,609 | INFO | Connections loaded successfully
+2026-02-17 23:19:28,609 | INFO | Saved Connections successfully
+2026-02-17 23:19:28,610 | INFO | Connection added successfully | db=mongo | name=Test2
+2026-02-17 23:19:28,610 | INFO | Connection saved successfully
+2026-02-17 23:19:28,619 | INFO | Loading connections
+2026-02-17 23:19:28,632 | INFO | Connections loaded successfully
+2026-02-17 23:19:53,639 | INFO | Loading connections
+2026-02-17 23:19:53,639 | INFO | Connections loaded successfully
+2026-02-17 23:20:11,279 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:11,279 | INFO | Adding connection | db=redis
+2026-02-17 23:20:11,279 | INFO | Loading connections
+2026-02-17 23:20:11,279 | INFO | Connections loaded successfully
+2026-02-17 23:20:11,280 | INFO | Saved Connections successfully
+2026-02-17 23:20:11,280 | INFO | Connection added successfully | db=redis | name=Test1
+2026-02-17 23:20:11,280 | INFO | Connection saved successfully
+2026-02-17 23:20:11,285 | INFO | Loading connections
+2026-02-17 23:20:11,295 | INFO | Connections loaded successfully
+2026-02-17 23:20:22,410 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:22,410 | INFO | Adding connection | db=redis
+2026-02-17 23:20:22,410 | INFO | Loading connections
+2026-02-17 23:20:22,411 | INFO | Connections loaded successfully
+2026-02-17 23:20:22,411 | INFO | Saved Connections successfully
+2026-02-17 23:20:22,411 | INFO | Connection added successfully | db=redis | name=Test2
+2026-02-17 23:20:22,411 | INFO | Connection saved successfully
+2026-02-17 23:20:22,415 | INFO | Loading connections
+2026-02-17 23:20:22,427 | INFO | Connections loaded successfully
+2026-02-17 23:20:38,037 | INFO | AddConnection POST | db=redis | action=save
+2026-02-17 23:20:38,037 | INFO | Adding connection | db=redis
+2026-02-17 23:20:38,037 | INFO | Loading connections
+2026-02-17 23:20:38,037 | INFO | Connections loaded successfully
+2026-02-17 23:20:38,038 | INFO | Saved Connections successfully
+2026-02-17 23:20:38,038 | INFO | Connection added successfully | db=redis | name=Test13
+2026-02-17 23:20:38,038 | INFO | Connection saved successfully
+2026-02-17 23:20:38,041 | INFO | Loading connections
+2026-02-17 23:20:38,053 | INFO | Connections loaded successfully
+2026-02-17 23:20:42,394 | INFO | Deleting connection | db=redis | index=2
+2026-02-17 23:20:42,394 | INFO | Loading connections
+2026-02-17 23:20:42,395 | INFO | Connections loaded successfully
+2026-02-17 23:20:42,395 | INFO | Saved Connections successfully
+2026-02-17 23:20:42,396 | INFO | Connection deleted | db=redis | name=Test13
+2026-02-17 23:20:42,396 | INFO | Connection deleted | db=redis | index=2
+2026-02-17 23:20:42,401 | INFO | Loading connections
+2026-02-17 23:20:42,403 | INFO | Connections loaded successfully
+2026-02-17 23:20:47,670 | INFO | Loading connections
+2026-02-17 23:20:47,670 | INFO | Connections loaded successfully
+2026-02-17 23:20:59,987 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:20:59,987 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:20:59,987 | INFO | Loading connections
+2026-02-17 23:20:59,987 | INFO | Connections loaded successfully
+2026-02-17 23:20:59,988 | INFO | Saved Connections successfully
+2026-02-17 23:20:59,988 | INFO | Connection added successfully | db=rabbitmq | name=Test1
+2026-02-17 23:20:59,988 | INFO | Connection saved successfully
+2026-02-17 23:20:59,992 | INFO | Loading connections
+2026-02-17 23:21:00,004 | INFO | Connections loaded successfully
+2026-02-17 23:21:18,320 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:18,320 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:21:18,320 | INFO | Loading connections
+2026-02-17 23:21:18,320 | INFO | Connections loaded successfully
+2026-02-17 23:21:18,320 | WARNING | Duplicate connection name: Test1
+2026-02-17 23:21:18,320 | WARNING | Database name already exists
+2026-02-17 23:21:26,785 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:26,786 | WARNING | Validation failed | {'password': 'This field is required'}
+2026-02-17 23:21:31,302 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:21:31,302 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:21:31,302 | INFO | Loading connections
+2026-02-17 23:21:31,302 | INFO | Connections loaded successfully
+2026-02-17 23:21:31,303 | INFO | Saved Connections successfully
+2026-02-17 23:21:31,303 | INFO | Connection added successfully | db=rabbitmq | name=Test2
+2026-02-17 23:21:31,303 | INFO | Connection saved successfully
+2026-02-17 23:21:31,307 | INFO | Loading connections
+2026-02-17 23:21:31,321 | INFO | Connections loaded successfully
+2026-02-17 23:22:24,618 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:22:24,618 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:22:24,619 | INFO | Loading connections
+2026-02-17 23:22:24,619 | INFO | Connections loaded successfully
+2026-02-17 23:22:24,619 | WARNING | Duplicate connection name: Test1
+2026-02-17 23:22:24,619 | WARNING | Display name already exists
+2026-02-17 23:22:28,532 | INFO | Loading connections
+2026-02-17 23:22:28,532 | INFO | Connections loaded successfully
+2026-02-17 23:23:02,220 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-02-17 23:23:02,220 | INFO | Adding connection | db=rabbitmq
+2026-02-17 23:23:02,221 | INFO | Loading connections
+2026-02-17 23:23:02,221 | INFO | Connections loaded successfully
+2026-02-17 23:23:02,221 | WARNING | Duplicate connection name: Test2
+2026-02-17 23:23:02,221 | INFO | Saved Connections successfully
+2026-02-17 23:23:02,222 | INFO | Connection added successfully | db=rabbitmq | name=Test2
+2026-02-17 23:23:02,222 | INFO | Connection saved successfully
+2026-02-17 23:23:02,226 | INFO | Loading connections
+2026-02-17 23:23:02,242 | INFO | Connections loaded successfully
+2026-02-17 23:23:10,960 | INFO | Deleting connection | db=rabbitmq | index=2
+2026-02-17 23:23:10,960 | INFO | Loading connections
+2026-02-17 23:23:10,961 | INFO | Connections loaded successfully
+2026-02-17 23:23:10,961 | INFO | Saved Connections successfully
+2026-02-17 23:23:10,961 | INFO | Connection deleted | db=rabbitmq | name=Test2
+2026-02-17 23:23:10,961 | INFO | Connection deleted | db=rabbitmq | index=2
+2026-02-17 23:23:10,969 | INFO | Loading connections
+2026-02-17 23:23:10,971 | INFO | Connections loaded successfully
+2026-02-17 23:23:29,206 | INFO | Loading connections
+2026-02-17 23:23:29,207 | INFO | Connections loaded successfully
+2026-02-17 23:23:39,851 | INFO | Loading connections
+2026-02-17 23:23:39,852 | INFO | Connections loaded successfully
+2026-02-17 23:30:49,674 | INFO | Loading connections
+2026-02-17 23:30:49,685 | INFO | Connections loaded successfully
+2026-02-17 23:31:29,021 | INFO | Loading connections
+2026-02-17 23:31:29,021 | INFO | Connections loaded successfully
+2026-02-17 23:31:33,513 | INFO | Loading connections
+2026-02-17 23:31:33,514 | INFO | Connections loaded successfully
+2026-02-17 23:31:35,545 | INFO | Loading connections
+2026-02-17 23:31:35,545 | INFO | Connections loaded successfully
+2026-02-17 23:41:19,527 | INFO | Loading connections
+2026-02-17 23:41:19,527 | INFO | Connections loaded successfully
+2026-02-17 23:56:10,908 | INFO | Loading connections
+2026-02-17 23:56:10,909 | INFO | Connections loaded successfully
+2026-02-17 23:56:46,108 | INFO | Updating connection | db=postgresql | index=0
+2026-02-17 23:56:46,108 | INFO | Loading connections
+2026-02-17 23:56:46,108 | INFO | Connections loaded successfully
+2026-02-17 23:56:46,109 | INFO | Saved Connections successfully
+2026-02-17 23:56:46,109 | INFO | Connection updated successfully | db=postgresql
+2026-02-17 23:56:46,109 | INFO | Connection updated | db=postgresql | index=0
+2026-02-17 23:56:46,113 | INFO | Loading connections
+2026-02-17 23:56:46,127 | INFO | Connections loaded successfully
+2026-02-17 23:56:49,683 | INFO | Loading connections
+2026-02-17 23:56:49,684 | INFO | Connections loaded successfully
+2026-02-17 23:56:53,795 | INFO | Updating connection | db=postgresql | index=1
+2026-02-17 23:56:53,795 | INFO | Loading connections
+2026-02-17 23:56:53,796 | INFO | Connections loaded successfully
+2026-02-17 23:56:53,796 | WARNING | Duplicate during edit | db=postgresql | index=1 | error=Database name already exists
+2026-02-17 23:56:59,021 | INFO | Loading connections
+2026-02-17 23:56:59,022 | INFO | Connections loaded successfully
+2026-02-18 00:00:46,972 | INFO | Loading connections
+2026-02-18 00:00:46,972 | INFO | Connections loaded successfully
+2026-02-18 00:00:52,714 | INFO | Loading connections
+2026-02-18 00:00:52,715 | INFO | Connections loaded successfully
+2026-02-24 10:47:21,931 | INFO | Loading connections
+2026-02-24 10:47:21,962 | INFO | Connections loaded successfully
+2026-02-24 10:47:24,305 | INFO | Loading connections
+2026-02-24 10:47:24,306 | INFO | Connections loaded successfully
+2026-02-24 10:47:26,387 | INFO | Loading connections
+2026-02-24 10:47:26,387 | INFO | Connections loaded successfully
+2026-02-24 10:47:31,286 | INFO | Deleting connection | db=postgresql | index=0
+2026-02-24 10:47:31,286 | INFO | Loading connections
+2026-02-24 10:47:31,286 | INFO | Connections loaded successfully
+2026-02-24 10:47:31,288 | INFO | Saved Connections successfully
+2026-02-24 10:47:31,288 | INFO | Connection deleted | db=postgresql | name=Test2
+2026-02-24 10:47:31,289 | INFO | Connection deleted | db=postgresql | index=0
+2026-02-24 10:47:31,296 | INFO | Loading connections
+2026-02-24 10:47:31,313 | INFO | Connections loaded successfully
+2026-02-24 10:47:33,433 | INFO | Deleting connection | db=postgresql | index=0
+2026-02-24 10:47:33,434 | INFO | Loading connections
+2026-02-24 10:47:33,434 | INFO | Connections loaded successfully
+2026-02-24 10:47:33,435 | INFO | Saved Connections successfully
+2026-02-24 10:47:33,435 | INFO | Connection deleted | db=postgresql | name=Test1
+2026-02-24 10:47:33,435 | INFO | Connection deleted | db=postgresql | index=0
+2026-02-24 10:47:33,451 | INFO | Loading connections
+2026-02-24 10:47:33,469 | INFO | Connections loaded successfully
+2026-02-24 10:48:47,613 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:48:47,613 | INFO | Connection test successful
+2026-02-24 10:49:07,058 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:49:07,059 | INFO | Connection test successful
+2026-02-24 10:49:13,893 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:49:13,893 | INFO | Connection test successful
+2026-02-24 10:50:31,480 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:50:31,480 | WARNING | Validation failed | {'password': 'This field is required'}
+2026-02-24 10:50:47,312 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:50:47,313 | INFO | Connection test successful
+2026-02-24 10:50:52,735 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:50:52,735 | INFO | Connection test successful
+2026-02-24 10:51:19,890 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:51:19,890 | INFO | Connection test successful
+2026-02-24 10:53:23,828 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 10:53:23,828 | INFO | Connection test successful
+2026-02-24 11:03:13,032 | INFO | Loading connections
+2026-02-24 11:03:13,033 | INFO | Connections loaded successfully
+2026-02-24 11:03:19,646 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:03:19,646 | WARNING | Validation failed | {'display_name': 'This field is required', 'host': 'This field is required', 'port': 'This field is required', 'database': 'This field is required', 'password': 'This field is required'}
+2026-02-24 11:06:34,977 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:06:34,977 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 127, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 25, in test_postgres
+    User=payload["user"],
+         ~~~~~~~^^^^^^^^
+KeyError: 'user'
+2026-02-24 11:09:24,475 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:09:24,475 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 127, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 25, in test_postgres
+    User=payload["user"],
+         ~~~~~~~^^^^^^^^
+KeyError: 'user'
+2026-02-24 11:09:30,286 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:09:30,286 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 127, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 25, in test_postgres
+    User=payload["user"],
+         ~~~~~~~^^^^^^^^
+KeyError: 'user'
+
+
+
+
+2026-02-24 11:16:40,142 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:16:40,143 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 128, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 134, in connect
+    dsn = _ext.make_dsn(dsn, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\extensions.py", line 167, in make_dsn
+    parse_dsn(dsn)
+    ~~~~~~~~~^^^^^
+psycopg2.ProgrammingError: invalid dsn: invalid connection option "User"
+
+
+
+
+2026-02-24 11:17:11,260 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:17:11,260 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 128, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 134, in connect
+    dsn = _ext.make_dsn(dsn, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\extensions.py", line 167, in make_dsn
+    parse_dsn(dsn)
+    ~~~~~~~~~^^^^^
+psycopg2.ProgrammingError: invalid dsn: invalid connection option "User"
+
+2026-02-24 11:17:56,624 | INFO | AddConnection POST | db=postgresql | action=test
+2026-02-24 11:17:56,749 | INFO | Connection test successful
+2026-02-24 11:18:08,903 | INFO | AddConnection POST | db=postgresql | action=save
+2026-02-24 11:18:08,904 | INFO | Adding connection | db=postgresql
+2026-02-24 11:18:08,904 | INFO | Loading connections
+2026-02-24 11:18:08,915 | INFO | Connections loaded successfully
+2026-02-24 11:18:08,916 | INFO | Saved Connections successfully
+2026-02-24 11:18:08,916 | INFO | Connection added successfully | db=postgresql | name=Test Connection1
+2026-02-24 11:18:08,916 | INFO | Connection saved successfully
+2026-02-24 11:18:08,921 | INFO | Loading connections
+2026-02-24 11:18:08,931 | INFO | Connections loaded successfully
+2026-02-24 11:18:13,567 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:18:13,567 | INFO | Loading connections
+2026-02-24 11:18:13,567 | INFO | Connections loaded successfully
+2026-02-24 11:18:13,567 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:18:13,718 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:18:13,718 | INFO | Loading connections
+2026-02-24 11:18:13,719 | INFO | Connections loaded successfully
+2026-02-24 11:18:13,719 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:18:31,682 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:18:31,682 | INFO | Loading connections
+2026-02-24 11:18:31,682 | INFO | Connections loaded successfully
+2026-02-24 11:18:31,682 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:18:47,741 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:18:47,741 | INFO | Loading connections
+2026-02-24 11:18:47,741 | INFO | Connections loaded successfully
+2026-02-24 11:18:47,741 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:19:14,571 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:19:14,572 | INFO | Loading connections
+2026-02-24 11:19:14,572 | INFO | Connections loaded successfully
+2026-02-24 11:19:14,572 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:36,118 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:36,119 | INFO | Loading connections
+2026-02-24 11:39:36,119 | INFO | Connections loaded successfully
+2026-02-24 11:39:36,119 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:37,683 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:37,683 | INFO | Loading connections
+2026-02-24 11:39:37,683 | INFO | Connections loaded successfully
+2026-02-24 11:39:37,683 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:37,877 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:37,878 | INFO | Loading connections
+2026-02-24 11:39:37,878 | INFO | Connections loaded successfully
+2026-02-24 11:39:37,878 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,057 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,057 | INFO | Loading connections
+2026-02-24 11:39:38,057 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,058 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,230 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,231 | INFO | Loading connections
+2026-02-24 11:39:38,231 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,231 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,413 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,413 | INFO | Loading connections
+2026-02-24 11:39:38,414 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,414 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,597 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,597 | INFO | Loading connections
+2026-02-24 11:39:38,598 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,598 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,780 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,781 | INFO | Loading connections
+2026-02-24 11:39:38,781 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,781 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:38,980 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:38,981 | INFO | Loading connections
+2026-02-24 11:39:38,981 | INFO | Connections loaded successfully
+2026-02-24 11:39:38,981 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:39:39,141 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:39:39,141 | INFO | Loading connections
+2026-02-24 11:39:39,141 | INFO | Connections loaded successfully
+2026-02-24 11:39:39,141 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:09,021 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:09,021 | INFO | Loading connections
+2026-02-24 11:43:09,022 | INFO | Connections loaded successfully
+2026-02-24 11:43:09,022 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:09,757 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:09,757 | INFO | Loading connections
+2026-02-24 11:43:09,758 | INFO | Connections loaded successfully
+2026-02-24 11:43:09,758 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:10,020 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:10,020 | INFO | Loading connections
+2026-02-24 11:43:10,020 | INFO | Connections loaded successfully
+2026-02-24 11:43:10,020 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:10,256 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:10,256 | INFO | Loading connections
+2026-02-24 11:43:10,256 | INFO | Connections loaded successfully
+2026-02-24 11:43:10,257 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:10,471 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:10,471 | INFO | Loading connections
+2026-02-24 11:43:10,472 | INFO | Connections loaded successfully
+2026-02-24 11:43:10,472 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:10,695 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:10,695 | INFO | Loading connections
+2026-02-24 11:43:10,695 | INFO | Connections loaded successfully
+2026-02-24 11:43:10,695 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:10,901 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:10,901 | INFO | Loading connections
+2026-02-24 11:43:10,902 | INFO | Connections loaded successfully
+2026-02-24 11:43:10,902 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:11,117 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:11,118 | INFO | Loading connections
+2026-02-24 11:43:11,118 | INFO | Connections loaded successfully
+2026-02-24 11:43:11,118 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:11,352 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:11,352 | INFO | Loading connections
+2026-02-24 11:43:11,352 | INFO | Connections loaded successfully
+2026-02-24 11:43:11,352 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:11,579 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:11,580 | INFO | Loading connections
+2026-02-24 11:43:11,580 | INFO | Connections loaded successfully
+2026-02-24 11:43:11,580 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:11,841 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:11,841 | INFO | Loading connections
+2026-02-24 11:43:11,842 | INFO | Connections loaded successfully
+2026-02-24 11:43:11,842 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:12,046 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:12,046 | INFO | Loading connections
+2026-02-24 11:43:12,047 | INFO | Connections loaded successfully
+2026-02-24 11:43:12,047 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:12,288 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:12,288 | INFO | Loading connections
+2026-02-24 11:43:12,288 | INFO | Connections loaded successfully
+2026-02-24 11:43:12,288 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:12,513 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:12,513 | INFO | Loading connections
+2026-02-24 11:43:12,514 | INFO | Connections loaded successfully
+2026-02-24 11:43:12,514 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:12,752 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:12,753 | INFO | Loading connections
+2026-02-24 11:43:12,753 | INFO | Connections loaded successfully
+2026-02-24 11:43:12,753 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:36,914 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:36,916 | INFO | Loading connections
+2026-02-24 11:43:36,917 | INFO | Connections loaded successfully
+2026-02-24 11:43:36,917 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:43:37,168 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:43:37,168 | INFO | Loading connections
+2026-02-24 11:43:37,168 | INFO | Connections loaded successfully
+2026-02-24 11:43:37,169 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:56:54,506 | INFO | Loading connections
+2026-02-24 11:56:54,507 | INFO | Connections loaded successfully
+2026-02-24 11:59:11,446 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:59:11,446 | INFO | Loading connections
+2026-02-24 11:59:11,446 | INFO | Connections loaded successfully
+2026-02-24 11:59:11,446 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 11:59:11,639 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 11:59:11,639 | INFO | Loading connections
+2026-02-24 11:59:11,640 | INFO | Connections loaded successfully
+2026-02-24 11:59:11,640 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 12:00:13,359 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 12:00:13,359 | INFO | Loading connections
+2026-02-24 12:00:13,359 | INFO | Connections loaded successfully
+2026-02-24 12:00:13,359 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 12:00:15,004 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 12:00:15,004 | INFO | Loading connections
+2026-02-24 12:00:15,004 | INFO | Connections loaded successfully
+2026-02-24 12:00:15,004 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:32:39,008 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:32:39,011 | INFO | Loading connections
+2026-02-24 15:32:39,014 | INFO | Connections loaded successfully
+2026-02-24 15:32:39,014 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:32:41,890 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:32:41,890 | INFO | Loading connections
+2026-02-24 15:32:41,891 | INFO | Connections loaded successfully
+2026-02-24 15:32:41,891 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:32:44,995 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:32:44,995 | INFO | Loading connections
+2026-02-24 15:32:44,996 | INFO | Connections loaded successfully
+2026-02-24 15:32:44,996 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:33:06,832 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:33:06,832 | INFO | Loading connections
+2026-02-24 15:33:06,833 | INFO | Connections loaded successfully
+2026-02-24 15:33:06,833 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:34:10,883 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:34:10,884 | INFO | Loading connections
+2026-02-24 15:34:10,884 | INFO | Connections loaded successfully
+2026-02-24 15:34:10,884 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 15:35:19,184 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 15:35:19,191 | INFO | Loading connections
+2026-02-24 15:35:19,192 | INFO | Connections loaded successfully
+2026-02-24 15:35:19,192 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:07:28,497 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:07:28,498 | INFO | Loading connections
+2026-02-24 16:07:28,499 | INFO | Connections loaded successfully
+2026-02-24 16:07:28,500 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:08:16,979 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:08:16,979 | INFO | Loading connections
+2026-02-24 16:08:16,980 | INFO | Connections loaded successfully
+2026-02-24 16:08:16,980 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:30:57,180 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:30:57,180 | INFO | Loading connections
+2026-02-24 16:30:57,181 | INFO | Connections loaded successfully
+2026-02-24 16:30:57,181 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:31:00,108 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:31:00,108 | INFO | Loading connections
+2026-02-24 16:31:00,109 | INFO | Connections loaded successfully
+2026-02-24 16:31:00,110 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:31:49,797 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:31:49,797 | INFO | Loading connections
+2026-02-24 16:31:49,810 | INFO | Connections loaded successfully
+2026-02-24 16:31:49,810 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:49:33,863 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:49:33,864 | INFO | Loading connections
+2026-02-24 16:49:33,865 | INFO | Connections loaded successfully
+2026-02-24 16:49:33,866 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:49:35,803 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:49:35,804 | INFO | Loading connections
+2026-02-24 16:49:35,804 | INFO | Connections loaded successfully
+2026-02-24 16:49:35,805 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:49:40,077 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:49:40,078 | INFO | Loading connections
+2026-02-24 16:49:40,078 | INFO | Connections loaded successfully
+2026-02-24 16:49:40,078 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:50:51,714 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:50:51,715 | INFO | Loading connections
+2026-02-24 16:50:51,715 | INFO | Connections loaded successfully
+2026-02-24 16:50:51,716 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:51:30,353 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:51:30,354 | INFO | Loading connections
+2026-02-24 16:51:30,354 | INFO | Connections loaded successfully
+2026-02-24 16:51:30,355 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:51:31,991 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:51:31,992 | INFO | Loading connections
+2026-02-24 16:51:31,993 | INFO | Connections loaded successfully
+2026-02-24 16:51:31,993 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:51:37,774 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:51:37,774 | INFO | Loading connections
+2026-02-24 16:51:37,775 | INFO | Connections loaded successfully
+2026-02-24 16:51:37,775 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 16:51:56,035 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 16:51:56,036 | INFO | Loading connections
+2026-02-24 16:51:56,037 | INFO | Connections loaded successfully
+2026-02-24 16:51:56,037 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 17:12:53,496 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 17:12:53,498 | INFO | Loading connections
+2026-02-24 17:12:53,499 | INFO | Connections loaded successfully
+2026-02-24 17:12:53,500 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 17:13:57,259 | INFO | Loading connections
+2026-02-24 17:13:57,261 | INFO | Connections loaded successfully
+2026-02-24 17:14:00,237 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 17:14:00,238 | INFO | Loading connections
+2026-02-24 17:14:00,238 | INFO | Connections loaded successfully
+2026-02-24 17:14:00,239 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 17:14:00,815 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 17:14:00,815 | INFO | Loading connections
+2026-02-24 17:14:00,816 | INFO | Connections loaded successfully
+2026-02-24 17:14:00,816 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-02-24 17:16:25,979 | INFO | Fetching connection | db=postgresql | index=0
+2026-02-24 17:16:25,993 | INFO | Loading connections
+2026-02-24 17:16:25,997 | INFO | Connections loaded successfully
+2026-02-24 17:16:25,997 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-09 10:15:00,243 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-09 10:15:00,252 | INFO | Loading connections
+2026-03-09 10:15:00,348 | INFO | Connections loaded successfully
+2026-03-09 10:15:00,349 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-10 14:32:58,926 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-10 14:32:58,933 | INFO | Loading connections
+2026-03-10 14:32:58,961 | INFO | Connections loaded successfully
+2026-03-10 14:32:58,965 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-16 18:38:45,810 | INFO | Loading connections
+2026-03-16 18:38:45,816 | INFO | Connections loaded successfully
+2026-03-16 18:38:48,047 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-16 18:38:48,047 | INFO | Loading connections
+2026-03-16 18:38:48,049 | INFO | Connections loaded successfully
+2026-03-16 18:38:48,049 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-16 18:38:48,300 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-16 18:38:48,300 | INFO | Loading connections
+2026-03-16 18:38:48,302 | INFO | Connections loaded successfully
+2026-03-16 18:38:48,302 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-16 18:38:53,426 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-16 18:38:53,426 | INFO | Loading connections
+2026-03-16 18:38:53,427 | INFO | Connections loaded successfully
+2026-03-16 18:38:53,427 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-16 18:38:56,158 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-16 18:38:56,159 | INFO | Loading connections
+2026-03-16 18:38:56,160 | INFO | Connections loaded successfully
+2026-03-16 18:38:56,160 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-16 18:39:00,236 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-16 18:39:00,236 | INFO | Loading connections
+2026-03-16 18:39:00,237 | INFO | Connections loaded successfully
+2026-03-16 18:39:00,238 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-26 14:31:58,643 | INFO | Loading connections
+2026-03-26 14:31:58,646 | INFO | Connections loaded successfully
+2026-03-26 14:32:00,700 | INFO | Loading connections
+2026-03-26 14:32:00,702 | INFO | Connections loaded successfully
+2026-03-26 14:56:21,522 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-26 14:56:21,523 | INFO | Loading connections
+2026-03-26 14:56:21,525 | INFO | Connections loaded successfully
+2026-03-26 14:56:21,525 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-26 14:56:22,042 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-26 14:56:22,042 | INFO | Loading connections
+2026-03-26 14:56:22,045 | INFO | Connections loaded successfully
+2026-03-26 14:56:22,045 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-26 14:56:27,024 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-26 14:56:27,025 | INFO | Loading connections
+2026-03-26 14:56:27,025 | INFO | Connections loaded successfully
+2026-03-26 14:56:27,026 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-03-26 14:56:37,068 | INFO | Fetching connection | db=postgresql | index=0
+2026-03-26 14:56:37,069 | INFO | Loading connections
+2026-03-26 14:56:37,070 | INFO | Connections loaded successfully
+2026-03-26 14:56:37,070 | INFO | Connection fetched | db=postgresql | name=Test Connection1
+2026-07-13 12:34:16,650 | INFO | Loading connections
+2026-07-13 12:34:16,656 | INFO | Connections loaded successfully
+2026-07-13 12:34:23,446 | INFO | Loading connections
+2026-07-13 12:34:23,449 | INFO | Connections loaded successfully
+2026-07-13 13:09:28,383 | INFO | Loading connections
+2026-07-13 13:10:57,028 | INFO | Loading connections
+2026-07-13 13:10:57,120 | INFO | Migrated 7 connections from connections.json
+2026-07-13 13:10:57,123 | INFO | Connections loaded successfully
+2026-07-13 13:12:19,428 | INFO | Loading connections
+2026-07-13 13:12:19,436 | INFO | Connections loaded successfully
+2026-07-13 13:13:23,356 | INFO | Loading connections
+2026-07-13 13:13:23,363 | INFO | Connections loaded successfully
+2026-07-13 14:33:56,749 | INFO | Loading connections
+2026-07-13 14:33:56,968 | INFO | Connections loaded successfully
+2026-07-13 14:34:00,597 | INFO | Loading connections
+2026-07-13 14:34:00,611 | INFO | Connections loaded successfully
+2026-07-13 14:34:05,959 | INFO | Loading connections
+2026-07-13 14:34:05,984 | INFO | Connections loaded successfully
+2026-07-13 14:34:09,125 | INFO | Deleting connection | db=mongo | index=0
+2026-07-13 14:34:09,158 | INFO | Connection deleted | db=mongo | name=Test1
+2026-07-13 14:34:09,160 | INFO | Connection deleted | db=mongo | index=0
+2026-07-13 14:34:09,185 | INFO | Loading connections
+2026-07-13 14:34:09,200 | INFO | Connections loaded successfully
+2026-07-13 14:34:13,970 | INFO | Deleting connection | db=mongo | index=0
+2026-07-13 14:34:13,986 | INFO | Connection deleted | db=mongo | name=Test2
+2026-07-13 14:34:13,986 | INFO | Connection deleted | db=mongo | index=0
+2026-07-13 14:34:13,995 | INFO | Loading connections
+2026-07-13 14:34:14,007 | INFO | Connections loaded successfully
+2026-07-13 14:36:24,722 | INFO | Loading connections
+2026-07-13 14:42:01,454 | INFO | Loading connections
+2026-07-13 14:42:01,467 | INFO | Connections loaded successfully
+2026-07-13 14:42:03,986 | INFO | Loading connections
+2026-07-13 14:42:03,993 | INFO | Connections loaded successfully
+2026-07-13 14:42:09,977 | INFO | Loading connections
+2026-07-13 14:42:09,986 | INFO | Connections loaded successfully
+2026-07-13 15:38:10,521 | INFO | Loading connections
+2026-07-13 15:38:10,586 | INFO | Connections loaded successfully
+2026-07-13 15:38:14,761 | INFO | Loading connections
+2026-07-13 15:38:14,776 | INFO | Connections loaded successfully
+2026-07-13 15:38:21,348 | INFO | Loading connections
+2026-07-13 15:38:21,360 | INFO | Connections loaded successfully
+2026-07-13 15:38:25,017 | INFO | Loading connections
+2026-07-13 15:38:25,026 | INFO | Connections loaded successfully
+2026-07-13 15:38:28,950 | INFO | Loading connections
+2026-07-13 15:38:28,964 | INFO | Connections loaded successfully
+2026-07-13 15:38:31,293 | INFO | Deleting connection | db=redis | index=1
+2026-07-13 15:38:31,325 | INFO | Connection deleted | db=redis | name=Test2
+2026-07-13 15:38:31,329 | INFO | Connection deleted | db=redis | index=1
+2026-07-13 15:38:31,371 | INFO | Loading connections
+2026-07-13 15:38:31,389 | INFO | Connections loaded successfully
+2026-07-13 15:38:32,962 | INFO | Deleting connection | db=redis | index=0
+2026-07-13 15:38:32,981 | INFO | Connection deleted | db=redis | name=Test1
+2026-07-13 15:38:32,981 | INFO | Connection deleted | db=redis | index=0
+2026-07-13 15:38:33,005 | INFO | Loading connections
+2026-07-13 15:38:33,024 | INFO | Connections loaded successfully
+2026-07-13 15:38:36,411 | INFO | Loading connections
+2026-07-13 15:38:36,425 | INFO | Connections loaded successfully
+2026-07-13 15:38:38,597 | INFO | Deleting connection | db=rabbitmq | index=0
+2026-07-13 15:38:38,618 | INFO | Connection deleted | db=rabbitmq | name=Test1
+2026-07-13 15:38:38,618 | INFO | Connection deleted | db=rabbitmq | index=0
+2026-07-13 15:38:38,625 | INFO | Loading connections
+2026-07-13 15:38:38,637 | INFO | Connections loaded successfully
+2026-07-13 15:38:40,303 | INFO | Deleting connection | db=rabbitmq | index=0
+2026-07-13 15:38:40,337 | INFO | Connection deleted | db=rabbitmq | name=Test2
+2026-07-13 15:38:40,339 | INFO | Connection deleted | db=rabbitmq | index=0
+2026-07-13 15:38:40,358 | INFO | Loading connections
+2026-07-13 15:38:40,384 | INFO | Connections loaded successfully
+2026-07-13 15:38:43,404 | INFO | Loading connections
+2026-07-13 15:38:43,422 | INFO | Connections loaded successfully
+2026-07-13 15:38:45,922 | INFO | Deleting connection | db=postgresql | index=0
+2026-07-13 15:38:45,939 | INFO | Connection deleted | db=postgresql | name=Test Connection1
+2026-07-13 15:38:45,940 | INFO | Connection deleted | db=postgresql | index=0
+2026-07-13 15:38:45,948 | INFO | Loading connections
+2026-07-13 15:38:45,962 | INFO | Connections loaded successfully
+2026-07-13 15:38:50,449 | INFO | Loading connections
+2026-07-13 15:38:50,460 | INFO | Connections loaded successfully
+2026-07-13 15:39:53,336 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 15:39:53,337 | INFO | Connection test successful
+2026-07-13 15:39:58,132 | INFO | AddConnection POST | db=mongo | action=save
+2026-07-13 15:39:58,132 | INFO | Adding connection | db=mongo
+2026-07-13 15:39:58,262 | INFO | Connection added successfully | db=mongo | name=Test1
+2026-07-13 15:39:58,263 | INFO | Connection saved successfully
+2026-07-13 15:39:58,277 | INFO | Loading connections
+2026-07-13 15:39:58,316 | INFO | Connections loaded successfully
+2026-07-13 15:40:00,384 | INFO | Loading connections
+2026-07-13 15:40:00,405 | INFO | Connections loaded successfully
+2026-07-13 15:40:02,496 | INFO | Loading connections
+2026-07-13 15:40:02,508 | INFO | Connections loaded successfully
+2026-07-13 15:50:24,210 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 15:50:28,275 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 15:50:28,344 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 15:50:28,344 | INFO | Connection test successful
+2026-07-13 15:50:28,401 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 15:50:28,406 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 15:50:46,950 | INFO | Loading connections
+2026-07-13 15:50:46,974 | INFO | Connections loaded successfully
+2026-07-13 15:51:47,990 | INFO | Loading connections
+2026-07-13 15:51:48,011 | INFO | Connections loaded successfully
+2026-07-13 15:51:50,099 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:51:50,201 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:51:53,131 | INFO | Loading connections
+2026-07-13 15:51:53,143 | INFO | Connections loaded successfully
+2026-07-13 15:51:58,315 | INFO | Loading connections
+2026-07-13 15:51:58,326 | INFO | Connections loaded successfully
+2026-07-13 15:51:59,408 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:51:59,417 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:55:00,404 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:55:00,417 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:55:01,693 | INFO | Loading connections
+2026-07-13 15:55:01,703 | INFO | Connections loaded successfully
+2026-07-13 15:55:04,691 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:55:04,701 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:55:05,196 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:55:05,216 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:55:18,013 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:55:18,027 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 15:55:31,490 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 15:55:35,574 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 15:55:35,673 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 15:55:35,673 | INFO | Connection test successful
+2026-07-13 15:55:35,706 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 15:55:35,713 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 15:55:35,724 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:55:35,731 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 15:57:21,076 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 15:57:21,088 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:01:15,223 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:01:19,356 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:01:19,449 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:01:19,450 | INFO | Connection test successful
+2026-07-13 16:01:19,483 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:01:19,488 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:01:19,502 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:01:19,507 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:02:00,525 | INFO | Loading connections
+2026-07-13 16:02:00,543 | INFO | Connections loaded successfully
+2026-07-13 16:02:02,547 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:02:02,558 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:03:29,402 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:03:33,564 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:03:33,639 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:03:33,640 | INFO | Connection test successful
+2026-07-13 16:03:33,690 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:03:33,696 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:03:33,711 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:03:33,718 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:04:30,905 | INFO | Loading connections
+2026-07-13 16:04:30,931 | INFO | Connections loaded successfully
+2026-07-13 16:04:32,093 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:04:32,111 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:05:10,043 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:05:14,122 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:05:14,169 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:05:14,169 | INFO | Connection test successful
+2026-07-13 16:05:14,187 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:05:14,192 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:05:14,200 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:05:14,203 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:05:32,974 | INFO | Loading connections
+2026-07-13 16:05:32,990 | INFO | Connections loaded successfully
+2026-07-13 16:05:34,383 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:05:34,393 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:05:46,391 | INFO | Loading connections
+2026-07-13 16:05:46,405 | INFO | Connections loaded successfully
+2026-07-13 16:05:49,619 | INFO | Loading connections
+2026-07-13 16:05:49,631 | INFO | Connections loaded successfully
+2026-07-13 16:05:51,651 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:05:51,662 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:08:25,946 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:08:30,032 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:08:30,118 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:08:30,119 | INFO | Connection test successful
+2026-07-13 16:08:30,141 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:08:30,146 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:08:30,154 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:08:30,159 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:12:15,337 | INFO | Loading connections
+2026-07-13 16:12:15,361 | INFO | Connections loaded successfully
+2026-07-13 16:12:16,954 | INFO | Loading connections
+2026-07-13 16:12:16,969 | INFO | Connections loaded successfully
+2026-07-13 16:12:20,541 | INFO | Loading connections
+2026-07-13 16:12:20,561 | INFO | Connections loaded successfully
+2026-07-13 16:12:21,850 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:12:21,873 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:12:33,084 | INFO | Updating connection | db=mongo | index=0
+2026-07-13 16:12:33,184 | INFO | Connection updated successfully | db=mongo | name=Test1
+2026-07-13 16:12:33,187 | INFO | Connection updated | db=mongo | index=0
+2026-07-13 16:12:33,215 | INFO | Loading connections
+2026-07-13 16:12:33,229 | INFO | Connections loaded successfully
+2026-07-13 16:13:04,005 | INFO | Loading connections
+2026-07-13 16:13:04,041 | INFO | Connections loaded successfully
+2026-07-13 16:13:58,976 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:14:03,088 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:14:03,161 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:14:03,161 | INFO | Connection test successful
+2026-07-13 16:14:07,263 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:14:07,269 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:14:07,275 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:14:07,280 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:17:32,101 | INFO | Loading connections
+2026-07-13 16:17:32,120 | INFO | Connections loaded successfully
+2026-07-13 16:19:42,950 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:19:47,012 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:19:47,118 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:19:47,119 | INFO | Connection test successful
+2026-07-13 16:19:51,266 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:19:51,272 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:19:51,284 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:19:51,289 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:20:41,443 | INFO | Loading connections
+2026-07-13 16:20:41,460 | INFO | Connections loaded successfully
+2026-07-13 16:20:47,256 | INFO | Loading connections
+2026-07-13 16:20:47,268 | INFO | Connections loaded successfully
+2026-07-13 16:20:48,839 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:20:48,891 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:21:00,411 | INFO | Loading connections
+2026-07-13 16:21:00,425 | INFO | Connections loaded successfully
+2026-07-13 16:21:01,951 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:21:01,967 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:26:11,970 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:26:16,042 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:26:16,111 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:26:16,111 | INFO | Connection test successful
+2026-07-13 16:26:20,169 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:26:20,174 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:26:20,185 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:26:20,189 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:26:49,637 | INFO | Loading connections
+2026-07-13 16:26:49,695 | INFO | Connections loaded successfully
+2026-07-13 16:26:51,223 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:26:51,250 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:28:14,039 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:28:18,110 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:28:18,162 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:28:18,163 | INFO | Connection test successful
+2026-07-13 16:28:22,256 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:28:22,260 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:28:22,268 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:28:22,272 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:31:58,016 | INFO | Loading connections
+2026-07-13 16:31:58,039 | INFO | Connections loaded successfully
+2026-07-13 16:32:00,316 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:32:00,326 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 16:32:07,048 | INFO | Updating connection | db=mongo | index=0
+2026-07-13 16:32:07,105 | INFO | Connection updated successfully | db=mongo | name=Test1
+2026-07-13 16:32:07,107 | INFO | Connection updated | db=mongo | index=0
+2026-07-13 16:32:07,132 | INFO | Loading connections
+2026-07-13 16:32:07,143 | INFO | Connections loaded successfully
+2026-07-13 16:32:15,025 | INFO | Loading connections
+2026-07-13 16:32:15,040 | INFO | Connections loaded successfully
+2026-07-13 16:32:34,906 | INFO | AddConnection POST | db=redis | action=save
+2026-07-13 16:32:34,908 | INFO | Adding connection | db=redis
+2026-07-13 16:32:34,995 | INFO | Connection added successfully | db=redis | name=Test1
+2026-07-13 16:32:34,996 | INFO | Connection saved successfully
+2026-07-13 16:32:35,010 | INFO | Loading connections
+2026-07-13 16:32:35,035 | INFO | Connections loaded successfully
+2026-07-13 16:32:38,920 | INFO | Loading connections
+2026-07-13 16:32:38,939 | INFO | Connections loaded successfully
+2026-07-13 16:33:14,296 | INFO | AddConnection POST | db=postgresql | action=save
+2026-07-13 16:33:14,296 | INFO | Adding connection | db=postgresql
+2026-07-13 16:33:14,325 | INFO | Connection added successfully | db=postgresql | name=Test1
+2026-07-13 16:33:14,325 | INFO | Connection saved successfully
+2026-07-13 16:33:14,338 | INFO | Loading connections
+2026-07-13 16:33:14,358 | INFO | Connections loaded successfully
+2026-07-13 16:33:27,853 | INFO | Loading connections
+2026-07-13 16:33:27,872 | INFO | Connections loaded successfully
+2026-07-13 16:33:56,960 | INFO | AddConnection POST | db=rabbitmq | action=save
+2026-07-13 16:33:56,960 | INFO | Adding connection | db=rabbitmq
+2026-07-13 16:33:56,989 | INFO | Connection added successfully | db=rabbitmq | name=Test1
+2026-07-13 16:33:56,990 | INFO | Connection saved successfully
+2026-07-13 16:33:57,002 | INFO | Loading connections
+2026-07-13 16:33:57,017 | INFO | Connections loaded successfully
+2026-07-13 16:35:12,601 | INFO | Loading connections
+2026-07-13 16:35:12,623 | INFO | Connections loaded successfully
+2026-07-13 16:35:16,821 | INFO | Loading connections
+2026-07-13 16:35:16,838 | INFO | Connections loaded successfully
+2026-07-13 16:35:19,003 | INFO | Loading connections
+2026-07-13 16:35:19,021 | INFO | Connections loaded successfully
+2026-07-13 16:38:50,374 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:38:54,452 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:38:54,593 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:38:54,593 | INFO | Connection test successful
+2026-07-13 16:38:58,696 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:38:58,702 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:38:58,707 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:38:58,710 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:39:52,501 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 16:39:56,592 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 129, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 16:39:56,659 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 16:39:56,659 | INFO | Connection test successful
+2026-07-13 16:40:00,745 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 16:40:00,750 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 16:40:00,758 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 16:40:00,762 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 16:40:44,025 | INFO | Loading connections
+2026-07-13 16:40:44,054 | INFO | Connections loaded successfully
+2026-07-13 16:40:46,502 | INFO | Loading connections
+2026-07-13 16:40:46,518 | INFO | Connections loaded successfully
+2026-07-13 17:17:21,790 | INFO | Loading connections
+2026-07-13 17:17:21,874 | INFO | Connections loaded successfully
+2026-07-13 17:17:29,498 | INFO | Fetching connection | db=rabbitmq | index=0
+2026-07-13 17:17:29,538 | INFO | Connection fetched | db=rabbitmq | name=Test1
+2026-07-13 17:17:34,405 | INFO | Loading connections
+2026-07-13 17:17:34,418 | INFO | Connections loaded successfully
+2026-07-13 17:47:01,115 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 17:47:05,226 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 134, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 17:47:05,275 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 17:47:05,275 | INFO | Connection test successful
+2026-07-13 17:47:09,377 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 17:47:09,381 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 17:47:09,388 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 17:47:09,391 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 17:52:12,746 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 17:52:16,810 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 134, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 17:52:16,867 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 17:52:16,867 | INFO | Connection test successful
+2026-07-13 17:52:18,337 | INFO | Loading connections
+2026-07-13 17:52:18,355 | INFO | Connections loaded successfully
+2026-07-13 17:52:20,960 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 17:52:20,970 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 17:52:20,975 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 17:52:20,984 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 17:52:20,985 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 17:52:20,988 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 17:52:26,159 | INFO | Loading connections
+2026-07-13 17:52:26,172 | INFO | Connections loaded successfully
+2026-07-13 17:52:37,134 | INFO | Loading connections
+2026-07-13 17:52:37,149 | INFO | Connections loaded successfully
+2026-07-13 17:52:43,962 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 17:52:43,970 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 17:52:50,679 | INFO | Loading connections
+2026-07-13 17:52:50,687 | INFO | Connections loaded successfully
+2026-07-13 18:10:30,928 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:10:34,991 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 141, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:10:35,030 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:10:35,030 | INFO | Connection test successful
+2026-07-13 18:10:39,149 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:10:39,152 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:10:39,156 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:10:39,158 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:10:48,679 | INFO | Loading connections
+2026-07-13 18:10:48,699 | INFO | Connections loaded successfully
+2026-07-13 18:17:36,318 | INFO | Loading connections
+2026-07-13 18:17:36,332 | INFO | Connections loaded successfully
+2026-07-13 18:22:21,966 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:22:26,063 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 141, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:22:26,091 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:22:26,092 | INFO | Connection test successful
+2026-07-13 18:22:30,194 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:22:30,197 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:22:30,201 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:22:30,203 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:23:50,119 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:23:54,189 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 141, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:23:54,221 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:23:54,221 | INFO | Connection test successful
+2026-07-13 18:23:58,328 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:23:58,330 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:23:58,333 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:23:58,334 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:26:43,620 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:26:47,705 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 141, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:26:47,737 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:26:47,738 | INFO | Connection test successful
+2026-07-13 18:26:51,815 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:26:51,817 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:26:51,820 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:26:51,821 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:48:11,141 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:48:15,221 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:48:15,258 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:48:15,258 | INFO | Connection test successful
+2026-07-13 18:48:19,364 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:48:19,367 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:48:19,373 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:48:19,379 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:48:39,438 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:48:43,495 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:48:43,526 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:48:43,526 | INFO | Connection test successful
+2026-07-13 18:48:55,634 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:48:55,637 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:48:55,642 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:48:55,645 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 18:54:40,700 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 18:54:44,761 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 143, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 18:54:44,791 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 18:54:44,792 | INFO | Connection test successful
+2026-07-13 18:54:56,936 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 18:54:56,938 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 18:54:56,942 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 18:54:56,944 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:06:12,070 | INFO | Loading connections
+2026-07-13 19:06:12,081 | INFO | Connections loaded successfully
+2026-07-13 19:06:13,705 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:06:13,718 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 19:06:14,913 | INFO | Loading connections
+2026-07-13 19:06:14,920 | INFO | Connections loaded successfully
+2026-07-13 19:06:30,522 | INFO | Loading connections
+2026-07-13 19:06:30,534 | INFO | Connections loaded successfully
+2026-07-13 19:07:13,063 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:07:17,111 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 143, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:07:17,158 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:07:17,158 | INFO | Connection test successful
+2026-07-13 19:07:29,329 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:07:29,331 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:07:29,336 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:07:29,338 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:07:35,013 | INFO | Loading connections
+2026-07-13 19:07:35,033 | INFO | Connections loaded successfully
+2026-07-13 19:11:25,342 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:11:29,390 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 143, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:11:29,423 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:11:29,424 | INFO | Connection test successful
+2026-07-13 19:11:49,620 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:11:49,622 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:11:49,625 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:11:49,626 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:18:07,941 | INFO | Loading connections
+2026-07-13 19:18:07,951 | INFO | Connections loaded successfully
+2026-07-13 19:18:09,331 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:18:09,346 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 19:18:11,106 | INFO | Loading connections
+2026-07-13 19:18:11,114 | INFO | Connections loaded successfully
+2026-07-13 19:18:21,014 | INFO | Loading connections
+2026-07-13 19:18:21,020 | INFO | Connections loaded successfully
+2026-07-13 19:18:22,413 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:18:22,420 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 19:18:26,788 | INFO | Loading connections
+2026-07-13 19:18:26,796 | INFO | Connections loaded successfully
+2026-07-13 19:21:17,869 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:21:21,936 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 143, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:21:21,979 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:21:21,979 | INFO | Connection test successful
+2026-07-13 19:21:42,192 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:21:42,194 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:21:42,197 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:21:42,199 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:22:09,574 | INFO | Loading connections
+2026-07-13 19:22:09,584 | INFO | Connections loaded successfully
+2026-07-13 19:22:14,337 | INFO | Loading connections
+2026-07-13 19:22:14,343 | INFO | Connections loaded successfully
+2026-07-13 19:22:15,794 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:22:15,805 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-13 19:22:17,179 | INFO | Loading connections
+2026-07-13 19:22:17,190 | INFO | Connections loaded successfully
+2026-07-13 19:25:13,622 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:25:17,675 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:25:17,702 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:25:17,702 | INFO | Connection test successful
+2026-07-13 19:25:33,806 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:25:33,808 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:25:33,813 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:25:33,815 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:26:15,142 | INFO | Adding connection | db=mongodb
+2026-07-13 19:33:28,873 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:33:32,933 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:33:32,965 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:33:32,965 | INFO | Connection test successful
+2026-07-13 19:33:49,115 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:33:49,119 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:33:49,125 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:33:49,128 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:34:14,330 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:34:18,414 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:34:18,458 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:34:18,458 | INFO | Connection test successful
+2026-07-13 19:34:34,609 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:34:34,614 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:34:34,621 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:34:34,624 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:36:28,787 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-13 19:36:32,852 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-13 19:36:32,905 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-13 19:36:32,905 | INFO | Connection test successful
+2026-07-13 19:36:49,062 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-13 19:36:49,066 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-13 19:36:49,072 | INFO | Fetching connection | db=mongo | index=0
+2026-07-13 19:36:49,075 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-13 19:37:38,995 | INFO | Loading connections
+2026-07-13 19:37:39,012 | INFO | Connections loaded successfully
+2026-07-14 10:35:35,594 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 10:35:39,708 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 10:35:39,826 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 10:35:39,827 | INFO | Connection test successful
+2026-07-14 10:35:50,009 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 10:35:50,015 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 10:35:50,023 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 10:35:50,028 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 10:36:32,829 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 10:36:36,896 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 10:36:36,969 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 10:36:36,970 | INFO | Connection test successful
+2026-07-14 10:36:53,188 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 10:36:53,198 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 10:36:53,212 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 10:36:53,224 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 10:42:26,397 | INFO | Loading connections
+2026-07-14 10:42:26,416 | INFO | Connections loaded successfully
+2026-07-14 10:42:28,546 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 10:42:28,554 | INFO | Connection fetched | db=mongo | name=Test1
+2026-07-14 10:42:39,413 | INFO | Loading connections
+2026-07-14 10:42:39,422 | INFO | Connections loaded successfully
+2026-07-14 10:43:53,147 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 10:43:57,219 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 10:43:57,255 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 10:43:57,256 | INFO | Connection test successful
+2026-07-14 10:44:13,461 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 10:44:13,466 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 10:44:13,473 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 10:44:13,478 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 11:07:34,169 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 11:07:38,266 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 11:07:38,290 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 11:07:38,291 | INFO | Connection test successful
+2026-07-14 11:07:54,425 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 11:07:54,428 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 11:07:54,434 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 11:07:54,436 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 11:29:03,280 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 11:29:07,380 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 11:29:07,458 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 11:29:07,458 | INFO | Connection test successful
+2026-07-14 11:29:23,659 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 11:29:23,663 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 11:29:23,673 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 11:29:23,678 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 11:29:43,487 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 11:29:47,610 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 11:29:47,700 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 11:29:47,700 | INFO | Connection test successful
+2026-07-14 11:30:03,911 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 11:30:03,920 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 11:30:03,931 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 11:30:03,935 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 12:22:27,654 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 12:22:31,730 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 12:22:31,820 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 12:22:31,820 | INFO | Connection test successful
+2026-07-14 12:22:47,998 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 12:22:48,000 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 12:22:48,004 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 12:22:48,008 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-14 17:27:23,005 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-14 17:27:27,097 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-14 17:27:27,138 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-14 17:27:27,138 | INFO | Connection test successful
+2026-07-14 17:27:43,279 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-14 17:27:43,283 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-14 17:27:43,289 | INFO | Fetching connection | db=mongo | index=0
+2026-07-14 17:27:43,292 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 15:45:41,588 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 15:45:45,685 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 15:45:45,719 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 15:45:45,719 | INFO | Connection test successful
+2026-07-15 15:46:09,912 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 15:46:09,915 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 15:46:09,921 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 15:46:09,924 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 16:07:44,933 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 16:07:49,037 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 16:07:49,111 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 16:07:49,111 | INFO | Connection test successful
+2026-07-15 16:08:29,846 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 16:08:29,847 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 16:08:29,851 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 16:08:29,852 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 16:16:43,011 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 16:16:47,100 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 16:16:47,128 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 16:16:47,128 | INFO | Connection test successful
+2026-07-15 16:17:27,654 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 16:17:27,656 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 16:17:27,660 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 16:17:27,661 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 16:37:21,580 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 16:37:25,652 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 16:37:25,718 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 16:37:25,718 | INFO | Connection test successful
+2026-07-15 16:38:06,438 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 16:38:06,442 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 16:38:06,448 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 16:38:06,451 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 16:51:39,507 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 16:51:43,567 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 16:51:43,604 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 16:51:43,604 | INFO | Connection test successful
+2026-07-15 16:52:24,230 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 16:52:24,234 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 16:52:24,242 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 16:52:24,245 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 16:58:12,079 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 16:58:16,157 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 16:58:16,186 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 16:58:16,186 | INFO | Connection test successful
+2026-07-15 16:58:56,727 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 16:58:56,730 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 16:58:56,733 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 16:58:56,734 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 17:01:49,297 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 17:01:53,361 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 17:01:53,393 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 17:01:53,393 | INFO | Connection test successful
+2026-07-15 17:02:33,894 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 17:02:33,897 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 17:02:33,901 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 17:02:33,903 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 17:15:14,433 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 17:15:18,492 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 17:15:18,520 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 17:15:18,520 | INFO | Connection test successful
+2026-07-15 17:15:18,568 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 17:15:18,571 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 17:15:18,573 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 17:15:18,574 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 17:16:10,739 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 17:16:14,796 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 17:16:14,822 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 17:16:14,823 | INFO | Connection test successful
+2026-07-15 17:16:55,350 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 17:16:55,351 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 17:16:55,355 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 17:16:55,357 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 17:22:02,537 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 17:22:06,599 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 17:22:06,655 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 17:22:06,656 | INFO | Connection test successful
+2026-07-15 17:22:47,241 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 17:22:47,243 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 17:22:47,248 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 17:22:47,250 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-15 18:09:31,560 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-15 18:09:35,618 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-15 18:09:35,676 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-15 18:09:35,676 | INFO | Connection test successful
+2026-07-15 18:10:16,242 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-15 18:10:16,245 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-15 18:10:16,251 | INFO | Fetching connection | db=mongo | index=0
+2026-07-15 18:10:16,253 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-16 16:57:53,071 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-16 16:57:57,103 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-16 16:57:57,174 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-16 16:57:57,174 | INFO | Connection test successful
+2026-07-16 16:58:37,749 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-16 16:58:37,753 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-16 16:58:37,761 | INFO | Fetching connection | db=mongo | index=0
+2026-07-16 16:58:37,765 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-07-16 17:05:48,952 | INFO | AddConnection POST | db=postgresql | action=test
+2026-07-16 17:05:53,020 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-16 17:05:53,063 | INFO | AddConnection POST | db=mongo | action=test
+2026-07-16 17:05:53,063 | INFO | Connection test successful
+2026-07-16 17:06:33,662 | INFO | Fetching connection | db=postgresql | index=0
+2026-07-16 17:06:33,686 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-07-16 17:06:33,720 | INFO | Fetching connection | db=mongo | index=0
+2026-07-16 17:06:33,752 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-08-05 15:27:35,343 | INFO | Loading connections
+2026-08-05 15:27:35,373 | INFO | Connections loaded successfully
+2026-08-05 15:27:38,382 | INFO | Fetching connection | db=mongo | index=0
+2026-08-05 15:27:38,442 | INFO | Connection fetched | db=mongo | name=Test1
+2026-08-05 15:27:38,726 | INFO | Fetching connection | db=mongo | index=0
+2026-08-05 15:27:38,738 | INFO | Connection fetched | db=mongo | name=Test1
+2026-08-05 15:27:43,692 | INFO | Fetching connection | db=mongo | index=0
+2026-08-05 15:27:43,704 | INFO | Connection fetched | db=mongo | name=Test1
+2026-08-05 15:27:47,383 | INFO | Loading connections
+2026-08-05 15:27:47,399 | INFO | Connections loaded successfully
+2026-08-05 18:40:33,613 | INFO | AddConnection POST | db=postgresql | action=test
+2026-08-05 18:40:37,689 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-08-05 18:40:37,772 | INFO | AddConnection POST | db=mongo | action=test
+2026-08-05 18:40:37,773 | INFO | Connection test successful
+2026-08-05 18:41:18,489 | INFO | Fetching connection | db=postgresql | index=0
+2026-08-05 18:41:18,493 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-08-05 18:41:18,498 | INFO | Fetching connection | db=mongo | index=0
+2026-08-05 18:41:18,501 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-08-06 11:00:31,460 | INFO | AddConnection POST | db=postgresql | action=test
+2026-08-06 11:00:35,520 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-08-06 11:00:35,564 | INFO | AddConnection POST | db=mongo | action=test
+2026-08-06 11:00:35,564 | INFO | Connection test successful
+2026-08-06 11:01:16,234 | INFO | Fetching connection | db=postgresql | index=0
+2026-08-06 11:01:16,236 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-08-06 11:01:16,241 | INFO | Fetching connection | db=mongo | index=0
+2026-08-06 11:01:16,244 | INFO | Connection fetched | db=mongo | name=Saved Mongo
+2026-08-07 11:07:11,308 | INFO | Loading connections
+2026-08-07 11:07:11,326 | INFO | Connections loaded successfully
+2026-08-07 18:21:34,314 | INFO | AddConnection POST | db=postgresql | action=test
+2026-08-07 18:21:38,381 | ERROR | Connection test failed
+Traceback (most recent call last):
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\views.py", line 142, in post
+    test_postgres(payload)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Siva Sai\MyProjects\dbplane\dbplane\db_details\services\postgres_service.py", line 20, in test_postgres
+    psycopg2.connect(
+    ~~~~~~~~~~~~~~~~^
+        host=payload["host"],
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        connect_timeout=10
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-08-07 18:21:38,467 | INFO | AddConnection POST | db=mongo | action=test
+2026-08-07 18:21:38,467 | INFO | Connection test successful
+2026-08-07 18:22:19,542 | INFO | Fetching connection | db=postgresql | index=0
+2026-08-07 18:22:19,547 | INFO | Connection fetched | db=postgresql | name=Saved PG
+2026-08-07 18:22:19,560 | INFO | Fetching connection | db=mongo | index=0
+2026-08-07 18:22:19,564 | INFO | Connection fetched | db=mongo | name=Saved Mongo
